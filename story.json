@@ -1,0 +1,49 @@
+[
+    {
+"title": "Scene 1",
+"id":"1",
+"image":"",
+"text":  "Setting:  A house on a hill"
+},
+{
+    "title": "Scene 2",
+    "id":"2",
+    "image":"",
+    "text":  "Setting:  A grand stairwell"
+    },
+{
+    "title": "Scene 3",
+    "id":"3",
+    "image":"",
+    "text":  "Setting:  A Kitchen"
+    },
+{
+    "title": "Scene 4",
+    "id":"4",
+    "image":"library.jpg",
+    "text":  "Setting:  A Library, ladder"
+    },
+{
+    "title": "Scene 5",
+    "id":"5",
+    "image":"cellar.jpg",
+    "text":  "Setting:  A Cellar"
+    },
+{
+    "title": "Scene 6",
+    "id":"",
+    "image":"cementary.jpg",
+    "text":  "Setting:  A Cementary"
+    },
+{
+    "title": "Scene 7",
+    "id":"",
+    "image":"",
+    "text":  "Setting: A Garden "
+    },
+
+]
+
+
+
+  
