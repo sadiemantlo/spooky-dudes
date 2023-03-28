@@ -1,0 +1,59 @@
+[
+{
+"id":"1",
+"image":"",
+"text":  "You've been cordially invited to explore a house on a hill"
+},
+{
+    "id":"2",
+    "image":"",
+    "text":  "You enter the house and are immediately greeted by it's majestic grandeur.  "
+},
+{
+    "id":"3",
+    "image":"kitchen.jpg",
+    "text":  "Setting:  A Kitchen"
+},
+{
+    "id":"4",
+    "image":"library.jpg",
+    "text":  "Setting:  A Library"
+},
+{
+    "id":"5",
+    "image":"cellar.png",
+    "text":  "Setting:  A Cellar"
+},
+{
+    "id":"6",
+    "image":"old-cemetary.jpg",
+    "text":  "Setting:  A Cementary"
+},
+{
+    "id":"7",
+    "image":"garden.png",
+    "text":  "Setting: A Garden "
+},
+{
+
+    "id":"8",
+    "image":"blackness.jpg",
+    "text":  "Setting: Death "
+},
+{
+
+    "id":"9",
+    "image":"treasureopen_720.png, treasureclose_720.png",
+    "text":  "Setting: The Survivor "
+},
+{
+    "id":"10",
+    "image":"seance.png",
+    "text":  "Setting: A seance "
+},
+
+]
+
+
+
+  
