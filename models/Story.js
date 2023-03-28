@@ -28,7 +28,14 @@ Story.init(
                 unique: false,
               }
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'story',
+      }
 );
 
 module.exports = Story;
