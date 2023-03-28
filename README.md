@@ -1,4 +1,4 @@
-# FullStack Boilerplate <!-- omit in toc -->
+# SPOOKY STORY >:] <!-- omit in toc -->
 
 This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL. This boilerplate if configured for easy deployment on Heroku with JawsDB MySQL add-on.
 
