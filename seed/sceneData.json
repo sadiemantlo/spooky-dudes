@@ -41,13 +41,13 @@
     "id":"6",
     "image":"garden.png",
     "title": "The Garden",
-    "text":  "Setting: A Garden "
+    "text":  "Perhaps if you stay outside, the horrors of the mansion won’t reach you. You step into the overgrown garden. In the distance you notice a strange golden glow. It's coming from the cemetery! Perhaps the Prendergast fortune is hidden there. Button: Go to the Cemetery button: Keep exploring (returns to foyer)"
 },
 {
     "id":"7",
     "image":"old-cemetery.jpg",
     "title": "The Cemetery",
-    "text":  "Setting:  A Cementary"
+    "text":  "You push open the creaky iron gate. The grass and trees are terribly overgrown, but the glowing golden light is unmistakable now. You rush forward. Maybe you can trick your way out of staying the night here. Grave robbing is a victim-less crime right? button: ... "
 },
 
 {
@@ -68,7 +68,7 @@
     "id":"10",
     "image":"blackness.jpg",
     "title": "You Die in the Cemetery",
-    "text":  "Setting: Death "
+    "text":  "Just as the thought crosses your mind, and undead arm bursts from the ground and latches onto you leg. You cry out, and your ankle twists painfully as the ghoul’s strong grip pulls you down. Darkness quickly overtakes you as your body is dragged into the earth. Button: Try again?"
 },
 {
 
