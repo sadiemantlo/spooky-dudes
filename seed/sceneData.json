@@ -29,7 +29,7 @@
     "id":"4",
     "image":"library.jpg",
     "title": "The Library",
-    "text":  "Setting:  A Library"
+    "text":  "Libraries are safe. Maybe you and your friends can camp out there for the night. You go to scout it out. Despite the state of the rest of the manor, the library seems to be in good condition. Books line the shelves neatly, and ladders ascend to the top of the room’s vaulted ceilings. Out of the corner of your eye, you notice a brief rush of movement as something skitters up a ladder and disappears behind one of the shelves. You notice a draft from behind this bookshelf, maybe there’s a secret door? Button: Climb the ladder, Button: This is creepy, go back to the Foyer"
 },
 {
     "id":"5",
@@ -54,7 +54,7 @@
     "id":"8",
     "image":"seance.png",
     "title": "The Seance",
-    "text":  "Setting: A seance "
+    "text":  "As you climb you notice a faint light behind the bookshelf peeking between the books. You push the books aside and find a peculiar hidden reading room. In the center of the table you see a ouija board. As you move closer you notice the planchette moving over the board on it’s own. You put your hands on the planchette and it spells out. “<user’s name>, my manor is yours now, for a price.” Do you agree?  Button: Yes, win! Button No(returns user to foyer)"
 },
 {
 
@@ -75,7 +75,7 @@
     "id":"11",
     "image":"treasureopen_720.png, treasureclose_720.png",
     "title": "You Survived!",
-    "text":  "Setting: The Survivor "
+    "text":  "You agree. The whole manor seems to start shaking, books falling from the shelves. One particularly large tome hits your head and you black out. When you wake up, you notice daylight streaming into the library. A nearby chest filled to the brim with Lord Prendergast's fortune sits open. You go to find your friends, but they have all mysteriously disappeared. The following days are filled with fame and luxury, but you never see your friends again. Perhaps that was the price for your survival. The End."
 }
 
 ]
