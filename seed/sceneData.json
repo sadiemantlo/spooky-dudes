@@ -4,22 +4,26 @@
 {
 "id":"0",
 "image":"pathtoimagehere",
+"title": "Prendergast Manor",
 "text": "tentative outline for story path"
-}
+},
 {
 "id":"1",
 "image":"",
-"text":  "You've been cordially invited to explore a house on a hill"
+"title": "Start",
+"text": "You and your friends stand at the doorstep of Prendergast manor. Everyone in town knows about this place, or the rumors anyway. The previous owner, Lord Prendergast, was as eccentric as he was rich. When he died, his will stated that whoever could last a whole night in the manor would earn the rights to Lord Prendergast's lavish fortune. You and your friends agreed to stay the night together, then split your winnings. Unbeknownst to your group, the mansion is a death trap. You all look at each other, daring the other to back out before it is too late. But no one does. button: Step inside."
 },
 {
     "id":"2",
     "image":"",
-    "text":  "You enter the house and are immediately greeted by it's majestic grandeur.  "
+    "title": "Foyer",
+    "text":  "It's been awhile since someone has dusted in here. The once lavish manor has fallen into disrepair since the previous owner’s death. Most of the doors of the doors and windows are sealed shut, except for the doors to the kitchen, the library, and the back door leading to the garden. Where do you go? button: the kitchen button: the library button: the garden"
 },
 {
     "id":"3",
     "image":"kitchen.jpg",
-    "text":  "Setting:  A Kitchen"
+    "title": "Kitchen",
+    "text":  "Twinkies don’t expire right? You make your way to the kitchen. The floorboards whine with each step you take, piercing the manor's heavy silence. Unfortunately the kitchen was emptied out long ago. You do notice, however, a waft of cold air coming from what looks to be a wine cellar. Weird. You wouldn't turn down an expensive cask of wine though. Button: Go down to the Cellar, Button: Keep Exploring the Manor"
 },
 {
     "id":"4",
@@ -57,7 +61,7 @@
     "id":"10",
     "image":"seance.png",
     "text":  "Setting: A seance "
-},
+}
 
 ]
 
