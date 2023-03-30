@@ -16,4 +16,4 @@ const withAuth = (req, res, next) => {
   return res.redirect('/login');
 };
 
-module.exports = withAuth;
+module.exports = withAuth;  
