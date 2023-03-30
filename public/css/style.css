@@ -6,7 +6,16 @@
     --text-size: 20px;
     --title-size: 28px;
 }
-
+a {
+    color: #FFD462;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  
 body {
 background-color: var(--plum);
 color: var(--gold);
