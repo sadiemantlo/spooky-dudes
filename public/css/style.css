@@ -90,9 +90,22 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
   
   
 .groupBanner{
-  background-color: rgb(17, 0, 48);
+  background-color: var(--plum);
+  height: 30vh;
 }
 #groupName{
   padding: 10px;
-  color: green;
+  color: rgb(28, 182, 28);
+  font-size: 50px;
+  font-family: 'Creepster', cursive;
+}
+
+#login{
+  padding-top: 10%;
+}
+
+
+
+.home:hover{
+  content: url('/images/home2.png');
 }
