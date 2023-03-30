@@ -89,3 +89,10 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
   
+.groupBanner{
+  background-color: rgb(17, 0, 48);
+}
+#groupName{
+  padding: 10px;
+  color: green;
+}
