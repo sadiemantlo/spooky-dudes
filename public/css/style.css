@@ -19,6 +19,7 @@ a {
 body {
 background-color: var(--plum);
 color: var(--gold);
+font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .portfolio-hero-header {
