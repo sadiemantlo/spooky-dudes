@@ -16,51 +16,66 @@
 {
     "id":"2",
     "image":"",
-    "title": "Foyer",
+    "title": "The Foyer",
     "text":  "It's been awhile since someone has dusted in here. The once lavish manor has fallen into disrepair since the previous owner’s death. Most of the doors of the doors and windows are sealed shut, except for the doors to the kitchen, the library, and the back door leading to the garden. Where do you go? button: the kitchen button: the library button: the garden"
 },
 {
     "id":"3",
     "image":"kitchen.jpg",
-    "title": "Kitchen",
+    "title": "The Kitchen",
     "text":  "Twinkies don’t expire right? You make your way to the kitchen. The floorboards whine with each step you take, piercing the manor's heavy silence. Unfortunately the kitchen was emptied out long ago. You do notice, however, a waft of cold air coming from what looks to be a wine cellar. Weird. You wouldn't turn down an expensive cask of wine though. Button: Go down to the Cellar, Button: Keep Exploring the Manor"
 },
 {
     "id":"4",
     "image":"library.jpg",
+    "title": "The Library",
     "text":  "Setting:  A Library"
 },
 {
     "id":"5",
     "image":"cellar.png",
-    "text":  "Setting:  A Cellar"
+    "title": "The Cellar",
+    "text":  "You open the cellar door to find a stairwell that leads undergrown in pitch darkness. You take a deep breath and decide to forge ahead. When you reach the bottom, you realize this isn’t an ordinary cellar. Strange medieval devices clutter the room. Despite the lack of ventilation, you can’t help but notice another rush of cold air. This place is creepy. button: Run up the stairs as fast as you can!"
 },
 {
     "id":"6",
-    "image":"old-cemetary.jpg",
-    "text":  "Setting:  A Cementary"
-},
-{
-    "id":"7",
     "image":"garden.png",
+    "title": "The Garden",
     "text":  "Setting: A Garden "
 },
 {
+    "id":"7",
+    "image":"old-cemetery.jpg",
+    "title": "The Cemetery",
+    "text":  "Setting:  A Cementary"
+},
 
+{
     "id":"8",
-    "image":"blackness.jpg",
-    "text":  "Setting: Death "
+    "image":"seance.png",
+    "title": "The Seance",
+    "text":  "Setting: A seance "
 },
 {
 
     "id":"9",
-    "image":"treasureopen_720.png, treasureclose_720.png",
-    "text":  "Setting: The Survivor "
+    "image":"blackness.jpg",
+    "title": "You Die in the Cellar",
+    "text":  "Forget the wine, you book it up the dark stairway, your sight set on the dim light of the kitchen above you. You almost reach the top when a rush of cold air hits you. Out of nowhere you feel icy hands claw at your shoulder blades, lifting you up by the back of your shirt. Your shoes scuff the stone staircase as you kick out at nothing. “Let go of me!” You shout, and the hands release you, sending you into a free fall down to the cellar far below you. Everything goes black. Button: Try again?"
 },
 {
+
     "id":"10",
-    "image":"seance.png",
-    "text":  "Setting: A seance "
+    "image":"blackness.jpg",
+    "title": "You Die in the Cemetery",
+    "text":  "Setting: Death "
+},
+{
+
+    "id":"11",
+    "image":"treasureopen_720.png, treasureclose_720.png",
+    "title": "You Survived!",
+    "text":  "Setting: The Survivor "
 }
 
 ]
