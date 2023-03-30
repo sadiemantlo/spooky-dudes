@@ -109,3 +109,7 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
 .home:hover{
   content: url('/images/home2.png');
 }
+
+.painttext{
+  font-family: 'Creepster', cursive;
+}
