@@ -23,9 +23,9 @@ User.init(
       allowNull: false,
     },
     password: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, 
       allowNull: false,
-    },
+    }
   },
   {
     hooks: {

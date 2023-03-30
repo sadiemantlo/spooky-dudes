@@ -7,7 +7,7 @@ const { User } = require('../models');
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
-// });
+// }); 
 
 router.get('/', async (req, res) => {
   try {

@@ -4,8 +4,8 @@ const Scene = require('./Scene');
 
 // Define sequelize associations in this file.
 
-Story.belongsTo(User, {
-    foreignKey: 'user_id'
+Scene.belongsTo(Story, {
+    foreignKey: 'scene_id'
 });
 
 Story.hasMany(Scene, {

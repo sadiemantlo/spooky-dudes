@@ -10,16 +10,19 @@ Scene.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
         },
         image: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        text: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        text: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        } 
     },
     {
         sequelize,
