@@ -26,7 +26,7 @@ const sceneData = [
   },
   {
     id: "4",
-    image: "library.jpg",
+    image: "library.png",
     title: "The Library",
     text: "Libraries are safe. Maybe you and your friends can camp out there for the night. You go to scout it out. Despite the state of the rest of the manor, the library seems to be in good condition. Books line the shelves neatly, and ladders ascend to the top of the room’s vaulted ceilings. Out of the corner of your eye, you notice a brief rush of movement as something skitters up a ladder and disappears behind one of the shelves. You notice a draft from behind this bookshelf, maybe there's a secret door? Button: Climb the ladder, Button: This is creepy, go back to the Foyer",
   },
@@ -44,7 +44,7 @@ const sceneData = [
   },
   {
     id: "7",
-    image: "old-cemetery.jpg",
+    image: "cemetery.jpg",
     title: "The Cemetery",
     text: "You push open the creaky iron gate. The grass and trees are terribly overgrown, but the glowing golden light is unmistakable now. You rush forward. Maybe you can trick your way out of staying the night here. Grave robbing is a victim-less crime right? button: ... ",
   },
@@ -57,13 +57,13 @@ const sceneData = [
   },
   {
     id: "9",
-    image: "blackness.jpg",
+    image: "cellar.png",
     title: "You Die in the Cellar",
     text: "Forget the wine, you book it up the dark stairway, your sight set on the dim light of the kitchen above you. You almost reach the top when a rush of cold air hits you. Out of nowhere you feel icy hands claw at your shoulder blades, lifting you up by the back of your shirt. Your shoes scuff the stone staircase as you kick out at nothing. “Let go of me!” You shout, and the hands release you, sending you into a free fall down to the cellar far below you. Everything goes black. Button: Try again?",
   },
   {
     id: "10",
-    image: "blackness.jpg",
+    image: "cemetary.jpg",
     title: "You Die in the Cemetery",
     text: "Just as the thought crosses your mind, and undead arm bursts from the ground and latches onto you leg. You cry out, and your ankle twists painfully as the ghoul's strong grip pulls you down. Darkness quickly overtakes you as your body is dragged into the earth. Button: Try again?",
   },
