@@ -1,12 +1,14 @@
 <div class="container">
     <div id="sign" class="row">
-        <img src=`images/${id}` class="mx-auto" style="max-width: 550px; max-height: 550px;">        
+        <img src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">        
     </div>
     <div class="row">
-        <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href=``>Login</a></button></div>
+        <div id="text" class="text-center">{{scene.text}}</div>
+    </div>
+    <div class="row">
+        <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.button1}}">{{scene.button1text}}</a></button></div>
+        <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.button2}}">{{scene.button2text}}</a></button></div>
+        <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.button3}}">{{scene.button3text}}</a></button></div>
+    
     </div>
 </div>
-
-{{!-- create an image div --}}
-
-{{!-- images/kitchen.jpg   --}}
