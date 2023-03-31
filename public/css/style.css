@@ -89,10 +89,64 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
   
-.groupBanner{
-  background-color: rgb(17, 0, 48);
-}
-#groupName{
-  padding: 10px;
-  color: green;
-}
+  .groupBanner{
+    background-color: --plum;
+    height: 30vh;
+  }
+  #groupName{
+    padding: 10px;
+    color: rgb(28, 182, 28);
+    font-size: 50px;
+    font-family: 'Creepster', cursive;
+  }
+  
+  .story{
+    font-size: 75px;
+    font-family: 'Creepster', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -200%);
+  }
+  #login{
+    margin: 10px;
+  }
+  
+  #copyright{
+    color: white;
+  }
+  
+  #lock{
+    position: absolute;  
+    left: 0;
+    color: black;
+  }
+  
+  .painttext{
+    font-family: 'Finger Paint', cursive;
+  }
+  
+  .sub:hover{
+    color:white;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #lock{
+      top: 40.5%;
+    }
+    .painttext{
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    #lock{
+      top: 41%;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    #lock{
+      top: 42%;
+    }
+  }
