@@ -1,12 +1,20 @@
-<h1>Signup</h1>
-<form class='signup-form'>
-  <label for='username'>Username</label><br />
-  <input type='text' name='username' id='username' /><br />
-  <label for='password'>Password</label><br />
-  <input type='password' name='password' id='password' /><br />
-  <label for='confirm-password'>Confirm Password</label><br />
-  <input type='password' name='confirm-password' id='confirm-password' /><br />
-  <button class='btn' type='submit'>Submit</button>
-</form>
-<p>Already have an account? <a href='/login'>Login Here</a></p>
+<div class="container text-center">
+  <div id="sign" class="row">
+    <img src="/images/woodsign.png" class="mx-auto" style="max-width: 550px; max-height: 550px;">
+    <div id="lock" class="container">
+      <form class='signup-form'>
+        <label for='username' class ="painttext">Username</label><br />
+        <input type='text' name='username' id='username' /><br />
+        <label for='password' class ="painttext">Password</label><br />
+        <input type='password' name='password' id='password' /><br />
+        <label for='confirm-password' class ="painttext">Confirm Password</label><br />
+        <input type='password' name='confirm-password' id='confirm-password' /><br />
+        <button class='btn painttext sub' type='submit'>Submit</button>        
+      </form>
+        <p>Already have an account? <a href='/login'>Login Here</a></p>
+    </div>
+  </div>
+
+
 <script src='/js/signup.js'></script>
+</div>
