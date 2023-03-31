@@ -8,6 +8,8 @@ router.post('/', async (req, res) => {
     req.session.isLoggedIn = true;
     req.session.userId = user.id;
     req.session.save(() => res.json({ id: user.id }));
+
+    
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error.' });
