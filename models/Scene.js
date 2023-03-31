@@ -22,7 +22,19 @@ Scene.init(
         text: {
             type: DataTypes.TEXT,
             allowNull: false,
-        } 
+        }, 
+        button1: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        button2: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        button3: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        }
     },
     {
         sequelize,
