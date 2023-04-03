@@ -30,11 +30,19 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/select');
+    return;
+  }
   res.render('login', { title: 'Log-In Page' });
 });
 
 router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
+});
+
+router.get('/select', (req, res) => {
+  res.render('select', { title: 'Select Page' });
 });
 
 module.exports = router;
