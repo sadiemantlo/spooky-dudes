@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Scene, Story } = require('../models');
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -8,6 +8,25 @@ const { User } = require('../models');
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
 // }); 
+router.get('story/:id', async (req, res) =>{
+try {
+  const sceneData = await Scene.findByPk(req.params.id, {
+    include: { 
+      model: Story 
+    },
+  });
+  if(!sceneData) {
+    res.status(404).json({ message: 'No scene found with this id :/' });
+    return;
+  }
+  res.render('scene', {sceneData})
+
+} catch (error) {
+  console.log(error);
+  res.status(500).json(error);
+}
+
+})
 
 router.get('/', async (req, res) => {
   try {
@@ -36,5 +55,22 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
+
+router.get('/story', async (req, res) => {
+  try{
+    const sceneData = await Scene.findAll( {
+      include: { 
+        model: Story 
+      },
+    });
+    const scenes = sceneData.map((scene) => scene.get({plain:true}));
+    console.log(scenes);
+    res.render('story',{scenes});
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+  }
+  })
 
 module.exports = router;
