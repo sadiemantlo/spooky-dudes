@@ -1,5 +1,3 @@
-const button = document.getElementById("start");
-button.addEventListener("click", startStory);
 
 document.querySelector('.btn-logout').addEventListener('click', async () => {
   try {
@@ -11,9 +9,12 @@ document.querySelector('.btn-logout').addEventListener('click', async () => {
   }
 });
 
-const startStory = async (event) =>{
-  fetch("/api/scene/1")
-    .then(response => response.json())
-    .then(data => displayData(data))
-    .catch(error => console.error(error));
-}
+document.querySelector('#start').addEventListener('click', async () => {
+  try {
+    await fetch('/api/scene/1', { method: 'GET' });
+    document.location.replace('/story');
+  } catch (error) {
+    console.error(error);
+    console.error('Failed to start story.');
+  }
+});
