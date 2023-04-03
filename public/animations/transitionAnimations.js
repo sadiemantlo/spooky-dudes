@@ -8,7 +8,6 @@ anime({
   easing: "linear",
 });
 
-
 //transition out
 anime({
   targets: ".kitchen",

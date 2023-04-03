@@ -12,8 +12,8 @@ anime({
     anime({
       targets: ".treasureopen",
       scale: [
-        { value: [2, 1], duration: 3000}
-    ],
+        { value: [2, 1], duration: 3000 }
+      ],
       opacity: 1,
       duration: 3000,
     });
@@ -33,8 +33,8 @@ anime({
       scaleY: 1.8,
     });
 
-  let emojiPath = anime.path('#treasurecircle');
-  anime({
+    let emojiPath = anime.path('#treasurecircle');
+    anime({
       targets: '.goldcoinpng',
       translateX: emojiPath('x'),
       translateY: emojiPath('y'),
@@ -43,6 +43,6 @@ anime({
       loop: true,
       delay: anime.stagger(200),
       direction: 'alternate'
-});
+    });
   },
 });
