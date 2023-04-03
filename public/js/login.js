@@ -10,25 +10,31 @@ const handleLoginSubmit = async (event) => {
       return;
     }
 
-    const response = await fetch('/api/users/login', {
-      method: 'POST',
-      body: JSON.stringify({ username, password }),
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-    });
+    if (username && password) {
+      // Send a POST request to the API endpoint
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
 
-    if (!response.ok) {
-      alert('Failed to sign up.');
-      return;
+      if (response.ok) {
+        window.location.replace('/select');
+      }
+
+      // if (!response.ok) {
+      //   alert('Failed to sign up.');
+      //   return;
+      // }
+
+      // go to home page
+
+      // } 
     }
-
-    // go to home page
-    window.location.replace('/');
-  } catch (error) {
-    console.log(error);
-  }
-};
+  }catch (error) {
+      console.log(error);
+    }
+}
 
 document
   .querySelector('.login-form')
