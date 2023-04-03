@@ -23,17 +23,14 @@ Scene.init(
             type: DataTypes.TEXT,
             allowNull: false,
         }, 
-        button1: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        button2: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        button3: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
+        choices: {
+            type: DataTypes.STRING,
+            get(){
+                return this.getDataValue("choices").split(",");
+            },
+            set(value){
+                this.setDataValue("choices",value.join(","));
+            }
         }
     },
     {

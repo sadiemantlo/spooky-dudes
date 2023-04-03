@@ -1,0 +1,16 @@
+{{#each scenes as |scene|}}
+<div class="container">
+    <div id="sign" class="row">
+        <img src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">        
+    </div>
+    <div class="row">
+        <div id="text" class="text-center">{{scene.text}}</div>
+    </div>
+
+    <div class="row">
+        <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href="scene/{{scene.choices.[0]}}">{{scene.choices.[1]}}</a></button></div>
+    
+    </div>
+    {{/each}}
+    <script src='/js/scenes.js'></script>
+</div>
