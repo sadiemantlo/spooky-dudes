@@ -49,7 +49,7 @@ Scene.init(
             set(value){
                 this.setDataValue("choice3",value.join(","));
             }
-        }
+        },
     },
     {
         sequelize,
