@@ -8,25 +8,7 @@ const { User, Scene, Story } = require('../models');
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
 // }); 
-router.get('story/:id', async (req, res) =>{
-try {
-  const sceneData = await Scene.findByPk(req.params.id, {
-    include: { 
-      model: Story 
-    },
-  });
-  if(!sceneData) {
-    res.status(404).json({ message: 'No scene found with this id :/' });
-    return;
-  }
-  res.render('scene', {sceneData})
 
-} catch (error) {
-  console.log(error);
-  res.status(500).json(error);
-}
-
-})
 
 router.get('/', async (req, res) => {
   try {
@@ -73,4 +55,23 @@ router.get('/story', async (req, res) => {
   }
   })
 
+  router.get('story/:id', async (req, res) =>{
+    try {
+      const sceneData = await Scene.findByPk(req.params.id, {
+        include: { 
+          model: Story 
+        },
+      });
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      res.render('scene', {sceneData})
+    
+    } catch (error) {
+      console.log(error);
+      res.status(500).json(error);
+    }
+    
+    })
 module.exports = router;
