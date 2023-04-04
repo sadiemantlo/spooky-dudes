@@ -11,7 +11,7 @@ const handleLoginSubmit = async (event) => {
     }
 
     if (username && password) {
-      // Send a POST request to the API endpoint
+      // Send a POST request to the API endpoint      
       const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
@@ -23,7 +23,6 @@ const handleLoginSubmit = async (event) => {
       } else {
         alert(response.statusText);
       }
-
     }
   };
 

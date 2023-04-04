@@ -166,6 +166,9 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     #comment{
       margin-top: 6.5%;
     }
+    #credit{
+      margin-top: 6.5%;
+    }
   }
   
   @media only screen and (min-width: 992px) {

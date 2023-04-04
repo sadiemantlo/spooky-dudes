@@ -22,7 +22,16 @@ Scene.init(
         text: {
             type: DataTypes.TEXT,
             allowNull: false,
-        } 
+        }, 
+        choices: {
+            type: DataTypes.STRING,
+            get(){
+                return this.getDataValue("choices").split(",");
+            },
+            set(value){
+                this.setDataValue("choices",value.join(","));
+            }
+        }
     },
     {
         sequelize,

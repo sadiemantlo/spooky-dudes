@@ -1,13 +1,33 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Scene, Story } = require('../models');
+const withAuth = require("../util/withAuth");
 
 // use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
+
 
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
 // }); 
+router.get('story/:id', async (req, res) =>{
+try {
+  const sceneData = await Scene.findByPk(req.params.id, {
+    include: { 
+      model: Story 
+    },
+  });
+  if(!sceneData) {
+    res.status(404).json({ message: 'No scene found with this id :/' });
+    return;
+  }
+  res.render('scene', {sceneData})
+
+} catch (error) {
+  console.log(error);
+  res.status(500).json(error);
+}
+
+})
 
 router.get('/', async (req, res) => {
   try {
@@ -41,8 +61,39 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
-router.get('/select', (req, res) => {
-  res.render('select', { title: 'Select Page' });
+router.get('/select', withAuth, async (req, res) => {
+  // try {
+  //   // Find the logged in user based on the session ID
+  //   const userData = await User.findByPk(req.session.user_id, {
+  //     attributes: { exclude: ['password'] },
+  //   });
+
+  //   const user = userData.get({ plain: true });
+
+    res.render('select', {
+      ...user,
+      logged_in: true
+  //   });
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
 });
+
+router.get('/story', async (req, res) => {
+  try{
+    const sceneData = await Scene.findAll( {
+      include: { 
+        model: Story 
+      },
+    });
+    const scenes = sceneData.map((scene) => scene.get({plain:true}));
+    console.log(scenes);
+    res.render('story',{scenes});
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+  }
+  });
 
 module.exports = router;
