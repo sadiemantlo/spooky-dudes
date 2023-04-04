@@ -1,1 +1,1 @@
-// JS for select partial goes here!
+console.log('Where would you like your story to take you?')

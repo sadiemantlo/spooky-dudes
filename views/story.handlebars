@@ -1,18 +1,17 @@
-{{#each scenes as |scene|}}
-<div class="container">
-    <div id="sign" class="row">
-        <img src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">        
-    </div>
-    <div class="row">
-        <div id="text" class="text-center">{{scene.text}}</div>
-    </div>
+<section class="container">
+  <h3 class="story-name">{{story.name}}</h3>
+  <section class="flex-row justify-center">
+    {{#each story.scenes as |scene|}}
+    <section class="card">
+      <a href="/scene/{{id}}">
+        <header>{{title}}</header>
 
-    <div class="row">
-        <div id="scene-button1" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choice1.[0]}}">{{scene.choice1.[1]}}</a></button></div>
-        <div id="scene-button2" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choice2.[0]}}">{{scene.choice2.[1]}}</a></button></div>
-         <div id="scene-button3" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choice3.[0]}}">{{scene.choice3.[1]}}</a></button></div>
-    </div>
-    </div>
+        <div class="card-body">
+          <img src="/images/{{filename}}" alt="{{description}}">
+          <p>By: </p>
+        </div>
+      </a>
+    </section>
     {{/each}}
-    <script src='/js/scenes.js'></script>
-</div>
+  </section>
+</section>

@@ -1,4 +1,4 @@
-const response = await fetch('/scene/:id', {
+const response = await fetch('story/scene/:id', {
   method: 'GET',
   body: JSON.stringify({ title, text }),
   headers: {

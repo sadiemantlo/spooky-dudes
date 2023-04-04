@@ -43,7 +43,7 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
-router.get('/select', (req, res) => {
+router.get('/select', withAuth, (req, res) => {  
     res.render('select', {title: 'Please Make a Selection'});
   });
 
