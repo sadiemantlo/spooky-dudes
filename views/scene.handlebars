@@ -1,4 +1,3 @@
-{{!-- {{#with (lookup scene scene_id)}} --}}
 {{#each scenes as |scene|}}
 <div class="container">
     <div id="sign" class="row">
@@ -14,7 +13,6 @@
         <div id="scene-button3" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choice3.[0]}}">{{scene.choice3.[1]}}</a></button></div>
     </div>
     </div>
-{{!-- {{/with}}    --}}
- {{/each}}
-    <script src='/js/story.js'></script>
+    {{/each}}
+    <script src='/js/scenes.js'></script>
 </div>

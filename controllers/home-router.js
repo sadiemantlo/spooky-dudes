@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Scene, Story } = require('../models');
+const { User, Story, Scene } = require('../models');
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -38,6 +38,7 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
+//this one works :)
 router.get('/story', async (req, res) => {
   try{
     const sceneData = await Scene.findAll( {
@@ -58,9 +59,19 @@ router.get('/story', async (req, res) => {
   router.get('story/:id', async (req, res) =>{
     try {
       const sceneData = await Scene.findByPk(req.params.id, {
-        include: { 
-          model: Story 
+        include: [
+          { 
+          model: Scene, 
+          attributes: [
+            'id',
+            'image',
+            'title',
+            'text',
+            'choice1',
+            'choice2',
+            'choice3'],
         },
+      ],
       });
       const scenes = sceneData.map((scene) => scene.get({plain:true}));
     console.log(scenes);
@@ -69,7 +80,7 @@ router.get('/story', async (req, res) => {
         res.status(404).json({ message: 'No scene found with this id :/' });
         return;
       }
-     // res.render('scene', {sceneData})
+      res.render('story', {scenes})
     
     } catch (error) {
       console.log(error);
