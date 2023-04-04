@@ -4,7 +4,7 @@ const sceneData = [
     id: "0",
     image: "title1.png",
     title: "Prendergast Manor",
-    text: "summary",
+    text: "Only the bravest enter the manor. The luckiest survive. Which one are you?",
     choice1:["scene/1", "start"],
     choice2:["",""],
     choice3:["",""]
@@ -60,7 +60,7 @@ const sceneData = [
     title: "The Garden",
     text: "Perhaps if you stay outside, the horrors of the mansion won't reach you. You step into the overgrown garden. In the distance you notice a strange golden glow. It's coming from the cemetery! Perhaps the Prendergast fortune is hidden there.",
     choice1:["scene/7","Go to the Cemetery"],
-    choice2:["2","Keep exploring the Mansion"],
+    choice2:["scene/2","Keep exploring the Mansion"],
     choice3:["",""]
   },
   {
@@ -79,7 +79,7 @@ const sceneData = [
     title: "The Seance",
     text: "As you climb you notice a faint light behind the bookshelf peeking between the books. You push the books aside and find a peculiar hidden reading room. In the center of the table you see a ouija board. As you move closer you notice the planchette moving over the board on it's own. You put your hands on the planchette and it spells out. “<user's name>, my manor is yours now, for a price.” Do you agree?",
     choice1:["scene/11","Yes!"],
-    choice2:["2","No!"],
+    choice2:["scene/2","No!"],
     choice3:["",""]
   },
   {
@@ -88,7 +88,7 @@ const sceneData = [
     title: "You Die in the Cellar",
     text: "Forget the wine, you book it up the dark stairway, your sight set on the dim light of the kitchen above you. You almost reach the top when a rush of cold air hits you. Out of nowhere you feel icy hands claw at your shoulder blades, lifting you up by the back of your shirt. Your shoes scuff the stone staircase as you kick out at nothing. “Let go of me!” You shout, and the hands release you, sending you into a free fall down to the cellar far below you. Everything goes black.",
     choice1:["scene/2","Try Again?"],
-    choice2:["/home","Accept your fate"],
+    choice2:["/","Accept your fate"],
     choice3:["",""]
   },
   {
@@ -97,7 +97,7 @@ const sceneData = [
     title: "You Die in the Cemetery",
     text: "Just as the thought crosses your mind, and undead arm bursts from the ground and latches onto you leg. You cry out, and your ankle twists painfully as the ghoul's strong grip pulls you down. Darkness quickly overtakes you as your body is dragged into the earth. Button: Try again?",
     choice1:["scene/2","Try Again?"],
-    choice2:["/home","Accept your fate"],
+    choice2:["/","Accept your fate"],
     choice3:["",""]
   },
   {
@@ -105,7 +105,7 @@ const sceneData = [
     image: "treasureopen_720.png, treasureclose_720.png",
     title: "You Survived!",
     text: "You agree. The whole manor seems to start shaking, books falling from the shelves. One particularly large tome hits your head and you black out. When you wake up, you notice daylight streaming into the library. A nearby chest filled to the brim with Lord Prendergast's fortune sits open. You go to find your friends, but they have all mysteriously disappeared. The following days are filled with fame and luxury, but you never see your friends again. Perhaps that was the price for your survival.",
-    choice1:["/comments","The End"],
+    choice1:["/","The End"],
     choice2:["",""],
     choice3:["",""]
   },
