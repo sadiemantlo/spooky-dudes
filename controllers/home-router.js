@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Scene, Story } = require('../models');
+const withAuth = require("../util/withAuth");
 
 // use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
+
 
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
@@ -31,12 +32,21 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/select');
+    return;
+  }
   res.render('login', { title: 'Log-In Page' });
 });
 
 router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
+
+router.get('/select', (req, res) => {
+    res.render('select', {title: 'Please Make a Selection'});
+  });
+
 
 router.get('/story', async (req, res) => {
   try{
@@ -53,7 +63,7 @@ router.get('/story', async (req, res) => {
     console.error(error);
     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
   }
-  })
+  });
 
   router.get('story/:id', async (req, res) =>{
     try {
