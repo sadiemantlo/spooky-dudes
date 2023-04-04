@@ -72,11 +72,14 @@ router.get('/story', async (req, res) => {
           model: Story 
         },
       });
+      const scenes = sceneData.map((scene) => scene.get({plain:true}));
+    console.log(scenes);
+    res.render('story',{scenes});
       if(!sceneData) {
         res.status(404).json({ message: 'No scene found with this id :/' });
         return;
       }
-      res.render('scene', {sceneData})
+     // res.render('scene', {sceneData})
     
     } catch (error) {
       console.log(error);
