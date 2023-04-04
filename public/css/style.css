@@ -129,6 +129,17 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
   .sub:hover{
     color:white;
   }
+
+ 
+
+  #signpost{
+    position: absolute;
+    left: 0;
+    color: black;
+    font-family: 'Finger Paint', cursive;
+  }
+
+
   
   @media only screen and (max-width: 600px) {
     #lock{
@@ -137,16 +148,43 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     .painttext{
       font-size: 12px;
     }
+    #signpost{
+      top: 33%;
+    }
   }
   
   @media only screen and (min-width: 600px) {
     #lock{
       top: 41%;
     }
+    #signpost{
+      top: 38.5%;
+    }
+    #home{
+      margin-top: 8.5%;
+    }
+    #comment{
+      margin-top: 7%;
+    }
+    #credit{
+      margin-top:7%;
+    }
   }
   
   @media only screen and (min-width: 992px) {
     #lock{
       top: 42%;
+    }
+    #signpost{
+      top: 39%;
+    }
+    #home{
+      margin-top: 3%;
+    }
+    #comment{
+      margin-top: 3%;
+    }
+    #credit{
+      margin-top: 2.5%;
     }
   }

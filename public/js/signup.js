@@ -32,7 +32,7 @@ const handleSignupSubmit = async (event) => {
     }
 
     // go to home page
-    window.location.replace('/');
+    document.location.replace('/login');
   } catch (error) {
     console.log(error);
   }
