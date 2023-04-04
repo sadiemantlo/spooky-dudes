@@ -1,3 +1,5 @@
+const anime = require('../../node_modules/animejs/lib/anime.min.js');
+
 anime.set('#groupName', { opacity: 0 });
 anime.set('#title', { opacity: 0 });
 anime.set('#start', { opacity: 0 });

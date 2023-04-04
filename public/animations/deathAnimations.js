@@ -1,3 +1,5 @@
+const anime = require('../../node_modules/animejs/lib/anime.min.js');
+
 anime({
     targets: ".zombiehand",
     scale: [

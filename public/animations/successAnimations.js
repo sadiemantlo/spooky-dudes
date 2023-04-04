@@ -1,3 +1,5 @@
+const anime = require('../../node_modules/animejs/lib/anime.min.js');
+
 anime.set(".treasureopen", { opacity: 0 });
 anime.set(".congratsText", { opacity: 0 });
 
@@ -33,7 +35,7 @@ anime({
       scaleY: 1.8,
     });
 
-    let emojiPath = anime.path('#treasurecircle');
+    const emojiPath = anime.path('#treasurecircle');
     anime({
       targets: '.goldcoinpng',
       translateX: emojiPath('x'),
