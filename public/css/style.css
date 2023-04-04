@@ -158,16 +158,16 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
       top: 41%;
     }
     #signpost{
-      top: 38%;
+      top: 38.5%;
     }
     #home{
-      margin-top: 9.5%;
+      margin-top: 8.5%;
     }
     #comment{
-      margin-top: 6.5%;
+      margin-top: 7%;
     }
     #credit{
-      margin-top: 6.5%;
+      margin-top:7%;
     }
   }
   
@@ -183,5 +183,8 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     #comment{
       margin-top: 3%;
+    }
+    #credit{
+      margin-top: 2.5%;
     }
   }

@@ -43,23 +43,10 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
-router.get('/select', withAuth, async (req, res) => {
-  // try {
-  //   // Find the logged in user based on the session ID
-  //   const userData = await User.findByPk(req.session.user_id, {
-  //     attributes: { exclude: ['password'] },
-  //   });
+router.get('/select', (req, res) => {
+    res.render('select', {title: 'Please Make a Selection'});
+  });
 
-  //   const user = userData.get({ plain: true });
-
-    res.render('select', {
-      ...user,
-      logged_in: true
-  //   });
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
-});
 
 router.get('/story', async (req, res) => {
   try{
