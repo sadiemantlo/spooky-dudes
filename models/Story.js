@@ -13,7 +13,7 @@ Story.init(
             autoIncrement: true,
         },
         scene_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             references: {
                 model: 'scene',
                 key: 'id',

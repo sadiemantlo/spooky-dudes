@@ -93,7 +93,7 @@ const sceneData = [
   },
   {
     id: "10",
-    image: "cemetary.jpg",
+    image: "cemetery-hand.png",
     title: "You Die in the Cemetery",
     text: "Just as the thought crosses your mind, and undead arm bursts from the ground and latches onto you leg. You cry out, and your ankle twists painfully as the ghoul's strong grip pulls you down. Darkness quickly overtakes you as your body is dragged into the earth. Button: Try again?",
     choice1:["scene/2","Try Again?"],

@@ -54,48 +54,34 @@ router.get('/select', (req, res) => {
   });
 
 //this one works :)
-router.get('/story', async (req, res) => {
-  try{
-    const sceneData = await Scene.findAll( {
-      include: { 
-        model: Story 
-      },
-    });
-    const scenes = sceneData.map((scene) => scene.get({plain:true}));
-    console.log(scenes);
-    res.render('story',{scenes});
-  }
-  catch (error) {
-    console.error(error);
-    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
-  }
-  });
+// router.get('/story', async (req, res) => {
+//   try{
+//     const sceneData = await Scene.findAll( {
+//       include: { 
+//         model: Story 
+//       },
+//     });
+//     const scenes = sceneData.map((scene) => scene.get({plain:true}));
+//     console.log(scenes);
+//     res.render('story',{scenes});
+//   }
+//   catch (error) {
+//     console.error(error);
+//     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+//   }
+//   });
 
-  router.get('story/:id', async (req, res) =>{
+
+  //this one doesn't
+  router.get('/story', async (req, res) =>{
     try {
-      const sceneData = await Scene.findByPk(req.params.id, {
-        include: [
-          { 
-          model: Scene, 
-          attributes: [
-            'id',
-            'image',
-            'title',
-            'text',
-            'choice1',
-            'choice2',
-            'choice3'],
-        },
-      ],
-      });
-      const scenes = sceneData.map((scene) => scene.get({plain:true}));
-    console.log(scenes);
-    res.render('story',{scenes});
-      if(!sceneData) {
-        res.status(404).json({ message: 'No scene found with this id :/' });
-        return;
-      }
-      res.render('story', {scenes})
+      const sceneData = await Scene.findByPk(req.params.id);
+      
+      // const scenes = sceneData.map((scene) => scene.get({plain:true}));
+     const scenes = sceneData.get({ plain: true });
+
+      console.log(sceneData);
+      res.render('story',{scenes});
     
     } catch (error) {
       console.log(error);
