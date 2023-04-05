@@ -44,6 +44,10 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
+router.get('/comments', (req, res) => {
+  res.render('comment', { title: 'Comment Page' });
+});
+
 
 router.get('/select', (req, res) => {
     res.render('select', {title: 'Please Make a Selection'});
@@ -103,4 +107,5 @@ router.get('/story', async (req, res) => {
     }
     
     })
-module.exports = router;
+
+    module.exports = router;

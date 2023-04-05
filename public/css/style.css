@@ -1,68 +1,195 @@
 :root {
-    /*color palette*/
-    --plum:#2C0945;
-    --gold: #FFD462;
-    /*text size*/
-    --text-size: 20px;
-    --title-size: 28px;
+  /*color palette*/
+  --plum: #2c0945;
+  --gold: #ffd462;
+  /*text size*/
+  --text-size: 20px;
+  --title-size: 28px;
 }
 a {
-    color: #FFD462;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: red;
-    text-decoration: underline;
-  }
-  
+  color: #ffd462;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
 body {
-background-color: var(--plum);
-color: var(--gold);
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--plum);
+  color: var(--gold);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .portfolio-hero-header {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #e6e6e6;
-    padding: 2rem 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 2rem 0;
+}
+
+.portfolio-hero-header-description {
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.portfolio-hero-header-description li {
+  -webkit-flex: 1 0 200px;
+  -ms-flex: 1 0 200px;
+  flex: 1 0 200px;
+  text-align: center;
+  padding: 0 1.25rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.portfolio-hero-header-description li:before {
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.portfolio-hero-header-description li:first-child:before {
+  content: "";
+}
+
+.portfolio-hero-header-menu {
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.portfolio-hero-header-menu li {
+  margin: 1.25rem;
+}
+
+.portfolio-hero-header-menu li a {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+.groupBanner {
+  background-color: --plum;
+  height: 30vh;
+}
+#groupName {
+  padding: 10px;
+  color: rgb(28, 182, 28);
+  font-size: 50px;
+  font-family: "Creepster", cursive;
+}
+
+.story {
+  font-size: 75px;
+  font-family: "Creepster", cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -200%);
+}
+#login {
+  margin: 10px;
+}
+
+#copyright {
+  color: white;
+}
+
+#lock {
+  position: absolute;
+  left: 0;
+  color: black;
+}
+
+.painttext {
+  font-family: "Finger Paint", cursive;
+}
+
+.sub:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #lock {
+    top: 40.5%;
   }
-  
-  .portfolio-hero-header-description {
-    list-style-type: none;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0;
+  .painttext {
+    font-size: 12px;
   }
-  
-  .portfolio-hero-header-description li {
-    -webkit-flex: 1 0 200px;
-        -ms-flex: 1 0 200px;
-            flex: 1 0 200px;
-    text-align: center;
-    padding: 0 1.25rem;
-    position: relative;
-    white-space: nowrap;
+}
+
+@media only screen and (min-width: 600px) {
+  #lock {
+    top: 41%;
   }
-  
-  .portfolio-hero-header-description li:before {
-    content: "*";
-    position: absolute;
-    left: 0;
-    top: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  #lock {
+    top: 42%;
   }
+<<<<<<< HEAD
+}
+
+/* comment section css */
+#commTitle {
+  font-size: 20px bolder;
+  margin-top: 68px;
+  line-height: 40px;
+}
+
+.commFont {
+  font-family: Trattatello, fantasy;
+  color: rgb(85, 52, 9);
+  text-shadow: 0px 0px 1px rgb(46, 27, 2);
+}
+
+.smComm {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#loginForm {
+  position: relative;
+}
+
+#name {
+  margin-top: 10px;
+}
+
+.commBox {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.thank-you {
+  font-size: 55px;
+}
+
+.hide {
+  display: none;
+} 
+=======
   
   .portfolio-hero-header-description li:first-child:before {
     content: "";
@@ -199,6 +326,7 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     #credit{
       margin-top: 2.5%;
     }
+<<<<<<< HEAD
     #Lgate{
       display: flex;
       max-width: 350px; max-height: 350px;
@@ -209,3 +337,7 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
 
   }
+=======
+  }
+>>>>>>> 5a4a2392f3ea811a053015433e59717ef731948c
+>>>>>>> cce7b1742cb7baeca1e46b14054adbb0d827232e
