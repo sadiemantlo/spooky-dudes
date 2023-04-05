@@ -1,1 +1,0 @@
-console.log('Where would you like your story to take you?')

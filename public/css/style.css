@@ -151,6 +151,12 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     #signpost{
       top: 33%;
     }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
   }
   
   @media only screen and (min-width: 600px) {
@@ -168,6 +174,12 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     #credit{
       margin-top:7%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
     }
   }
   
@@ -187,4 +199,13 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     #credit{
       margin-top: 2.5%;
     }
+    #Lgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+    #Rgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+
   }

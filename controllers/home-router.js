@@ -49,6 +49,10 @@ router.get('/select', (req, res) => {
     res.render('select', {title: 'Please Make a Selection'});
   });
 
+router.get('/comment', (req, res) => {  
+  res.render('comment', {title: 'Comment'});
+});
+
 //this one works :)
 router.get('/story', async (req, res) => {
   try{
