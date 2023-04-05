@@ -1,13 +1,16 @@
 const router = require('express').Router();
-const { User } = require('../models');
+
+const { User, Story, Scene } = require('../models');
+const withAuth = require("../util/withAuth");
 
 // use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
+
 
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
 //   // ...
 // }); 
+
 
 router.get('/', async (req, res) => {
   try {
@@ -30,6 +33,10 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/select');
+    return;
+  }
   res.render('login', { title: 'Log-In Page' });
 });
 
@@ -41,4 +48,60 @@ router.get('/comments', (req, res) => {
   res.render('comment', { title: 'Comment Page' });
 });
 
-module.exports = router;
+
+router.get('/select', (req, res) => {
+    res.render('select', {title: 'Please Make a Selection'});
+  });
+
+//this one works :)
+router.get('/story', async (req, res) => {
+  try{
+    const sceneData = await Scene.findAll( {
+      include: { 
+        model: Story 
+      },
+    });
+    const scenes = sceneData.map((scene) => scene.get({plain:true}));
+    console.log(scenes);
+    res.render('story',{scenes});
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+  }
+  });
+
+  router.get('story/:id', async (req, res) =>{
+    try {
+      const sceneData = await Scene.findByPk(req.params.id, {
+        include: [
+          { 
+          model: Scene, 
+          attributes: [
+            'id',
+            'image',
+            'title',
+            'text',
+            'choice1',
+            'choice2',
+            'choice3'],
+        },
+      ],
+      });
+      const scenes = sceneData.map((scene) => scene.get({plain:true}));
+    console.log(scenes);
+    res.render('story',{scenes});
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      res.render('story', {scenes})
+    
+    } catch (error) {
+      console.log(error);
+      res.status(500).json(error);
+    }
+    
+    })
+
+    module.exports = router;
