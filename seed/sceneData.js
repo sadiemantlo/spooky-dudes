@@ -1,4 +1,5 @@
 const { Scene } = require("../models");
+
 const sceneData = [
   {
     id: "0",
@@ -11,7 +12,7 @@ const sceneData = [
     id: "1",
     image: "mansion-front.png",
     title: "Start",
-    text: "You and your friends stand at the doorstep of Prendergast manor. Everyone in town knows about this place, or the rumors anyway. The previous owner, Lord Prendergast, was as eccentric as he was rich. When he died, his will stated that whoever could last a whole night in the manor would earn the rights to Lord Prendergast's lavish fortune. You and your friends agreed to stay the night together, then split your winnings. Unbeknownst to your group, the mansion is a death trap. You all look at each other, daring the other to back out before it is too late. But no one does. button: Step inside.",
+    text: "You and your friends stand at the doorstep of Prendergast manor. Everyone in town knows about this place, or the rumors anyway. The previous owner, Lord Prendergast, was as eccentric as he was rich. When he died, his will stated that whoever could last a whole night in the manor would earn the rights to Lord Prendergast's lavish fortune. You and your friends agreed to stay the night together, then split your winnings. Unbeknownst to your group, the mansion is a death trap. You all look at each other, daring the other to back out before it is too late. But no one does.",
     choices:["scene/2","Enter Mansion"]
   },
   {

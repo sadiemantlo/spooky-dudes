@@ -1,6 +1,3 @@
-const anime = require('../../node_modules/animejs/lib/anime.min.js');
-const Scene  = require('../../models/Scene');
-
 async function transitionIn(id, duration = 4000, easing = 'linear') {
   const scene = await Scene.findByPk(id);
   console.log(scene);
@@ -9,7 +6,8 @@ async function transitionIn(id, duration = 4000, easing = 'linear') {
     throw new Error(`Scene with id ${id} not found`);
   }
   const imgID = `#${scene.id}`;
-  console.log(imgID);
+  const imgElementId = document.querySelector("#sign img")
+  console.log(imgElementId);
 
   //transition in
   anime.set(imgID, { opacity: 0 });
@@ -19,9 +17,11 @@ async function transitionIn(id, duration = 4000, easing = 'linear') {
     duration: duration,
     easing: easing,
   });
-
 }
+
 transitionIn()
+
+
 
 
 // //transition out

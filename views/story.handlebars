@@ -4,18 +4,16 @@
         <img id="{{scene.id}}" src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">        
     </div>
     <div class="row">
-        <div id="text" class="text-center">{{scene.text}}</div>
+        <div id="text" class="storyText text-center">{{scene.text}}</div>
     </div>
+
 
     <div class="row">
         <div id="text" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choices.[0]}}">{{scene.choices.[1]}}</a></button></div>
     
     </div>
-    {{/each}}
-    <script src='/js/scenes.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src='/animations/sceneText.js'></script>
+
 </div>
-
-<script>
-    {{transitionIn()}}
-
-</script>
+    {{/each}}

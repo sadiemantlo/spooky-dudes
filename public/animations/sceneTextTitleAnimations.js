@@ -1,6 +1,5 @@
 const anime = require('../../node_modules/animejs/lib/anime.min.js');
 
-
 function sceneTitle (target, duration = 5000) {
 anime.set(".sceneTitle", {opacity:0})
 

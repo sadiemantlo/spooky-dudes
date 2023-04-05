@@ -1,5 +1,4 @@
-const anime = require('../../node_modules/animejs/lib/anime.min.js');
-
+async function homePageAnimations() {
 anime.set("#groupName", { opacity: 0 });
 anime.set("#title", { opacity: 0 });
 anime.set("#start", { opacity: 0 });
@@ -46,4 +45,9 @@ anime ({
     delay: 9000,
     duration: 3000,
   },
+});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  homePageAnimations();
 });
