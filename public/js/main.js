@@ -12,7 +12,7 @@ document.querySelector('.btn-logout').addEventListener('click', async () => {
 document.querySelector('#start').addEventListener('click', async () => {
   try {
     await fetch('/api/scene/1', { method: 'GET' });
-    document.location.replace('/story');
+    document.location.replace('/story/:id');
   } catch (error) {
     console.error(error);
     console.error('Failed to start story.');

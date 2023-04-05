@@ -124,6 +124,8 @@ img {
 
   }
 
-  .storyText .letter {
-    display: inline-block;
+.storyText .letter {
+    display: inline;
   }
+
+

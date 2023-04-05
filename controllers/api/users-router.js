@@ -22,7 +22,7 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ where: { username } });
     if (!user) {
       throw new Error('User not found.'); 
-    }
+    }   
     const isValidPassword = await user.checkPassword(password);
     if (!isValidPassword) {
       throw new Error('Invalid password');
@@ -46,5 +46,7 @@ router.post('/logout', (req, res) => {
     res.end();
   });
 });
+
+
 
 module.exports = router;

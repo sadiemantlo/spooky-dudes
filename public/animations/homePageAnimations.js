@@ -1,4 +1,9 @@
 async function homePageAnimations() {
+const homePage = document.getElementsByClassName('.home-page');
+if (!homePage){
+  return;
+}
+
 anime.set("#groupName", { opacity: 0 });
 anime.set("#title", { opacity: 0 });
 anime.set("#start", { opacity: 0 });
@@ -27,6 +32,11 @@ anime({
           { value: -1000, duration: 3000, delay: 500 },
           { value: 0, duration: 3000, delay: 500 },
         ],
+          rotate: {
+          delay: 5500,
+          value: 360,
+          duration: 5000,
+        }
 })
 
 anime({
