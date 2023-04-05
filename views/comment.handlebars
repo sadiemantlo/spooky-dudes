@@ -1,0 +1,19 @@
+
+<div class="container text-center">
+  <div id="sign" class="row hover">
+    <img src="/images/scroll.png" id="scroll" class="mx-auto" style="max-width: 550px; max-height: 750px;">
+    <div id="lock" class="container">
+    <h1 class ="commFont" id="commTitle">How was your stay <br>at</br>Prendergast Manor?</h1>
+      <form class="comment-form" id="form" method="POST" action="/api/comments">
+      <label for="name" class="commFont smComm">Name:</label>
+      <input type="text" name="name" id="name" class="commBox" required>
+      <br>
+      <label for="comment" class="commFont smComm">Comment:</label>
+      <textarea name="comment" id="comment" class="commBox"required></textarea>
+      <br>
+      <button type="submit" id="submit-comm" class="btn sub commFont smComm">Submit Comment</button>
+    </form>
+    </div>
+  </div>
+  <script src='/js/comment.js'></script>
+</div>

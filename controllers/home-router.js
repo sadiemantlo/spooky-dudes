@@ -37,4 +37,8 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
+router.get('/comments', (req, res) => {
+  res.render('comment', { title: 'Comment Page' });
+});
+
 module.exports = router;
