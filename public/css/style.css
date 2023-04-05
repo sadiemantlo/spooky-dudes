@@ -148,7 +148,6 @@ body {
   #lock {
     top: 42%;
   }
-<<<<<<< HEAD
 }
 
 /* comment section css */
@@ -189,7 +188,6 @@ body {
 .hide {
   display: none;
 } 
-=======
   
   .portfolio-hero-header-description li:first-child:before {
     content: "";
@@ -286,7 +284,7 @@ body {
     }
   }
   
-  @media only screen and (min-width: 600px) {
+  @media only screen and (max-width: 600px) {
     #lock{
       top: 41%;
     }
@@ -309,8 +307,33 @@ body {
       display: none;
     }
   }
+
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+    #lock{
+      top: 41%;
+    }
+    #signpost{
+      top: 38.5%;
+    }
+    #home{
+      margin-top: 7%;
+    }
+    #comment{
+      margin-top: 7%;
+    }
+    #credit{
+      margin-top:6%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
+  }
   
-  @media only screen and (min-width: 992px) {
+  
+  @media only screen and (min-width: 1025px) {
     #lock{
       top: 42%;
     }
@@ -326,7 +349,7 @@ body {
     #credit{
       margin-top: 2.5%;
     }
-<<<<<<< HEAD
+
     #Lgate{
       display: flex;
       max-width: 350px; max-height: 350px;
@@ -337,7 +360,5 @@ body {
     }
 
   }
-=======
-  }
->>>>>>> 5a4a2392f3ea811a053015433e59717ef731948c
->>>>>>> cce7b1742cb7baeca1e46b14054adbb0d827232e
+
+
