@@ -7,7 +7,7 @@ class Scene extends Model {}
 Scene.init(
     {
         id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
         },

@@ -72,22 +72,38 @@ router.get('/select', (req, res) => {
 //   });
 
 
-  //this one doesn't
-  router.get('/story', async (req, res) =>{
+  //this one doesn't work
+  // router.get('/story/:id', async (req, res) =>{
+  //   try {
+  //     const sceneData = await Scene.findByPk(req.params.id, {
+  //             include: { 
+  //               model: Story 
+  //             },
+  //           });
+  //   const scenes = sceneData.get({ plain: true });
+
+
+  //     console.log(sceneData);
+  //     res.render('story',{scenes});
+    
+  //   } catch (error) {
+  //     console.log(error);
+  //     res.status(500).json(error);
+  //   }
+    
+  //   })
+  router.get('/story/:id', async (req, res) =>{
     try {
       const sceneData = await Scene.findByPk(req.params.id);
-      
-      // const scenes = sceneData.map((scene) => scene.get({plain:true}));
-     const scenes = sceneData.get({ plain: true });
-
-      console.log(sceneData);
-      res.render('story',{scenes});
-    
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      res.status(200).json(sceneData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
     }
-    
-    })
+});
 
     module.exports = router;
