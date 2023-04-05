@@ -1,13 +1,3 @@
-
-.containerScene {
-  position: absolute;
-  margin: auto;
-  width: 700px;
-  height: 500px;
-  background-color: rgb(127, 152, 223);
-  overflow: hidden;
-}
-
 img {
   position: relative;
   margin-left: auto;
@@ -32,7 +22,6 @@ img {
   object-fit: fill;
   z-index: 0;
 }
-
 
 .ghostfoyer {
   position: absolute;
@@ -114,7 +103,6 @@ img {
   left:40%;
   z-index: 1;
 }
-
 
 .storyText {
   text-align: left;
