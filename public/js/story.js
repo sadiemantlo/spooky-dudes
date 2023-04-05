@@ -5,3 +5,9 @@ const response = await fetch('story/scene/:id', {
     'Content-Type': 'application/json; charset=UTF-8',
   },
 });
+
+
+
+// document
+//   .querySelector('#start')
+//   .addEventListener('#start', handleSignupSubmit);
