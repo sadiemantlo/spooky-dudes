@@ -17,6 +17,7 @@ app.engine('handlebars', exphbs({ helpers }));
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/images", express.static(path.join(__dirname, "/public/images")));
 
 
 // connect routes
