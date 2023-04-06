@@ -1,42 +1,38 @@
-anime.set(".treasureopen", { opacity: 0 });
-anime.set(".congratsText", { opacity: 0 });
 
 
 // Animate the transition from image1 to image2
+document.addEventListener('DOMContentLoaded', () => {
+async function treasure() {
+    
+  if (window.location.pathname === '/story/11') {
+
+anime.set("#treasureopen", { opacity: 0 });
+anime.set(".congratsText", { opacity: 0 });
+
+
 anime({
-  targets: ".treasureclosed",
-  opacity: 0,
-  duration: 2000,
-  easing: "linear",
-  complete: function () {
-    anime({
-      targets: ".treasureopen",
+      targets: "#treasureopen",
       scale: [
         { value: [2, 1], duration: 3000}
     ],
       opacity: 1,
       duration: 3000,
+      complete: function (){
+        anime({
+          targets: ".congratsText",
+          delay: 2000,
+          opacity: 1,
+          duration: 2000,
+          translateX: 250,
+          translateY: 300,
+          scaleY: 1.8,
+        });
+      }
     });
-    anime({
-      targets: ".congratsText",
-      delay: 2000,
-      opacity: 1,
-      duration: 2000,
-      translateX: 50,
-      translateY: 120,
-      scaleY: 1.8,
-    });
+  } else {
+    console.log("image not found");
+  }
+} 
+treasure()
+});
 
-  let emojiPath = anime.path('#treasurecircle');
-  anime({
-      targets: '.goldcoinpng',
-      translateX: emojiPath('x'),
-      translateY: emojiPath('y'),
-      easing: 'easeInOutQuart',
-      duration: 2000,
-      loop: true,
-      delay: (elem, index) => index*30,
-      direction: 'alternate'
-});
-  },
-});

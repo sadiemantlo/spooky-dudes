@@ -1,8 +1,5 @@
 async function homePageAnimations() {
-const homePage = document.getElementsByClassName('.home-page');
-if (!homePage){
-  return;
-}
+  if (window.location.pathname === '/') {
 
 anime.set("#groupName", { opacity: 0 });
 anime.set("#title", { opacity: 0 });
@@ -57,6 +54,7 @@ anime ({
     duration: 3000,
   },
 });
+}
 }
 
 document.addEventListener('DOMContentLoaded', () => {

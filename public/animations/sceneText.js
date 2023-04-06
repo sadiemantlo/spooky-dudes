@@ -1,5 +1,5 @@
 async function textAnimations(text) {
-const element = document.getElementsByClassName("storyText")[3];
+const element = document.getElementsByClassName("storyText")[0];
 element.innerHTML = element.textContent.replace(/\S/g,'<span class="letter">$&</span>');
 
 anime.timeline({loop:false})
@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
           image: "image",
           title: "title",
           text: "text",
-          choices: "choices"
+          choice1:["",""],
+          choice2:["",""],
+          choice3:["",""]
         },
       ];
  
