@@ -103,7 +103,9 @@ router.get('/comment', (req, res) => {
         res.status(404).json({ message: 'No scene found with this id :/' });
         return;
       }
-      res.status(200).json(sceneData);
+      const scene = sceneData.get({ plain: true });
+      res.render('story',{scene});
+      // res.status(200).json(sceneData);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

@@ -1,12 +1,8 @@
-{{!-- {{#with (lookup scene scene_id)}} --}}
-{{!-- {{#each scene}} --}}
-
-
 
 <div class="container">
     <div class="row">
         
-        {{!-- <img src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">         --}}
+        <img src="images/{{scene.image}}" class="mx-auto" style="max-width: 550px; max-height: 550px;">        
     </div>
     <div class="row">
         <div id="text" class="text-center typewriter">{{scene.text}}</div>
@@ -18,8 +14,7 @@
          <div id="scene-button3" class="text-center"><button type="button" class="btn btn-outline-light"><a href="{{scene.choice3.[0]}}">{{scene.choice3.[1]}}</a></button></div>
     </div>
     </div>
-    {{!-- {{/each}} --}}
-{{!-- {{/with}}    --}}
+
     <script src='/js/story.js'></script>
     {{!-- animation script file name--}}
 </div>
