@@ -104,7 +104,7 @@ const sceneData = [
   {
     id: 11,
     image: "treasureopen_720.png",
-    title: "You Survived!",
+    title: "",
     text: "You agree. The whole manor seems to start shaking, books falling from the shelves. One particularly large tome hits your head and you black out. When you wake up, you notice daylight streaming into the library. A nearby chest filled to the brim with Lord Prendergast's fortune sits open. You go to find your friends, but they have all mysteriously disappeared. The following days are filled with fame and luxury, but you never see your friends again. Perhaps that was the price for your survival.",
     choice1:["/select","The End"],
     choice2:["","@"],
