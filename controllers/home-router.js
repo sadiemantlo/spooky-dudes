@@ -57,7 +57,7 @@ router.get('/comment', (req, res) => {
   res.render('comment', {title: 'Comment'});
 });
 
-//this one works :)
+//renders all scenes at once, keep for debugging purposes
 // router.get('/story', async (req, res) => {
 //   try{
 //     const sceneData = await Scene.findAll( {
@@ -75,27 +75,7 @@ router.get('/comment', (req, res) => {
 //   }
 //   });
 
-
-  //this one doesn't work
-  // router.get('/story/:id', async (req, res) =>{
-  //   try {
-  //     const sceneData = await Scene.findByPk(req.params.id, {
-  //             include: { 
-  //               model: Story 
-  //             },
-  //           });
-  //   const scenes = sceneData.get({ plain: true });
-
-
-  //     console.log(sceneData);
-  //     res.render('story',{scenes});
-    
-  //   } catch (error) {
-  //     console.log(error);
-  //     res.status(500).json(error);
-  //   }
-    
-  //   })
+//get scene by id
   router.get('/story/:id', async (req, res) =>{
     try {
       const sceneData = await Scene.findByPk(req.params.id);
@@ -105,7 +85,6 @@ router.get('/comment', (req, res) => {
       }
       const scene = sceneData.get({ plain: true });
       res.render('story',{scene});
-      // res.status(200).json(sceneData);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

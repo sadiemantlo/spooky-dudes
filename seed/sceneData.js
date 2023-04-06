@@ -88,7 +88,7 @@ const sceneData = [
     title: "You Die in the Cellar",
     text: "Forget the wine, you book it up the dark stairway, your sight set on the dim light of the kitchen above you. You almost reach the top when a rush of cold air hits you. Out of nowhere you feel icy hands claw at your shoulder blades, lifting you up by the back of your shirt. Your shoes scuff the stone staircase as you kick out at nothing. “Let go of me!” You shout, and the hands release you, sending you into a free fall down to the cellar far below you. Everything goes black.",
     choice1:["2","Try Again?"],
-    choice2:["/","Accept your fate"],
+    choice2:["/select","Accept your fate"],
     choice3:["",""]
   },
   {
@@ -97,7 +97,7 @@ const sceneData = [
     title: "You Die in the Cemetery",
     text: "Just as the thought crosses your mind, and undead arm bursts from the ground and latches onto you leg. You cry out, and your ankle twists painfully as the ghoul's strong grip pulls you down. Darkness quickly overtakes you as your body is dragged into the earth. Button: Try again?",
     choice1:["2","Try Again?"],
-    choice2:["/","Accept your fate"],
+    choice2:["/select","Accept your fate"],
     choice3:["",""]
   },
   {
@@ -105,7 +105,7 @@ const sceneData = [
     image: "treasureopen_720.png",
     title: "You Survived!",
     text: "You agree. The whole manor seems to start shaking, books falling from the shelves. One particularly large tome hits your head and you black out. When you wake up, you notice daylight streaming into the library. A nearby chest filled to the brim with Lord Prendergast's fortune sits open. You go to find your friends, but they have all mysteriously disappeared. The following days are filled with fame and luxury, but you never see your friends again. Perhaps that was the price for your survival.",
-    choice1:["/","The End"],
+    choice1:["/select","The End"],
     choice2:["",""],
     choice3:["",""]
   },
