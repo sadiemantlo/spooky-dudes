@@ -49,7 +49,7 @@ router.get('/comments', (req, res) => {
 });
 
 
-router.get('/select', withAuth, async (req, res) => {
+router.get('/select', async (req, res) => {
    try {
     console.log('----- Req.session is -----', req.session);
     // Find the logged in user based on the session ID
@@ -78,7 +78,7 @@ router.get('/credit', (req, res) => {
 });
 
 //get scene by id
-  router.get('/story/:id', withAuth, async (req, res) =>{
+  router.get('/story/:id', async (req, res) =>{
     try {
       const sceneData = await Scene.findByPk(req.params.id);
       if(!sceneData) {
@@ -86,9 +86,7 @@ router.get('/credit', (req, res) => {
         return;
       }
       const scene = sceneData.get({ plain: true });
-      res.render('story',{
-        scene,
-        logged_in: true});
+      res.render('story',{scene});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     res.json(savedComments);
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     const savedComments = db;
     const newComment = req.body;
     savedComments.push(newComment);
