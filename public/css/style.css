@@ -22,6 +22,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* div:empty{display:none;} */
+
 .portfolio-hero-header {
   display: -webkit-flex;
   display: -ms-flexbox;
