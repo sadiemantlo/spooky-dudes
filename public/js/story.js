@@ -11,14 +11,9 @@ function buttonEmpty() {
     hideButton3.style.display = "none"
   }
 
-<<<<<<< HEAD
-
-
-=======
   //test 
  // hideButton2.style.display = "none";
  // hideButton3.style.display = "none";
 }
 buttonEmpty()
 console.log();
->>>>>>> b7a9254a2ae6360a2f34a644fec62807a00c8049

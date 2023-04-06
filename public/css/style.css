@@ -288,11 +288,14 @@ body {
   
   
   @media only screen and (min-width: 500px) {
+    #greet{
+      top:
+    }
     #lock{
       top: 31%;
     }
     #signpost{
-      top: 37%;
+      top: 35%;
     }
     #home{
       margin-top: 8.5%;

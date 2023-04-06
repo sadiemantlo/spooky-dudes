@@ -51,11 +51,12 @@ router.get('/comments', (req, res) => {
 
 router.get('/select', withAuth, async (req, res) => {
    try {
+    console.log('----- Req.session is -----', req.session);
     // Find the logged in user based on the session ID
-    const userData = await User.findOne(req.session.user_username, {
+    const userData = await User.findOne({ where: { username: req.session.user_username}}, {
       attributes: { exclude: ['password'] },    
     });
-
+    console.log('----- userData is -----', userData);
     const user = userData.get({ plain: true });
 
     res.render('select', {
@@ -66,13 +67,6 @@ router.get('/select', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-  //  await res.render('select', { title: 'Select' })
-     
-    
-// });
-
-
 
 router.get('/comment', (req, res) => {
   res.render('comment', { title: 'Comment' });
