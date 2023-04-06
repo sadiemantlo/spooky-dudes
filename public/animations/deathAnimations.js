@@ -1,13 +1,12 @@
-// Animate the transition from image1 to image2
 document.addEventListener('DOMContentLoaded', () => {
     async function deathScene() {
 
         // if (window.location.pathname === '/story/10') {
 
 
-            anime.set(".zombiehand", { scale: 0 });
+            anime.set(".sceneTitle9", { scale: 0 });
             anime({
-                targets: ".zombiehand",
+                targets: ".sceneTitle9",
                 scale: [
                     { value: [1, 2], duration: 1000 },
                     { value: [1], duration: 5000 }
