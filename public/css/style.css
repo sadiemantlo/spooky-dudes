@@ -216,7 +216,7 @@ body {
   
   .groupBanner{
     background-color: --plum;
-    height: 30vh;
+    height: 20vh;
   }
   #groupName{
     padding: 10px;
@@ -285,32 +285,14 @@ body {
     border: 1px solid;
   }
 
-
   
-  @media only screen and (max-width: 600px) {
-    #lock{
-      top: 40.5%;
-    }
-    .painttext{
-      font-size: 12px;
-    }
-    #signpost{
-      top: 33%;
-    }
-    #Lgate{
-      display: none;
-    }
-    #Rgate{
-      display: none;
-    }
-  }
   
   @media only screen and (min-width: 500px) {
     #lock{
-      top: 41%;
+      top: 31%;
     }
     #signpost{
-      top: 38.5%;
+      top: 37%;
     }
     #home{
       margin-top: 8.5%;
@@ -331,16 +313,16 @@ body {
 
   @media only screen and (min-width: 700px) and (max-width: 1024px) {
     #lock{
-      top: 41%;
+      top: 29%;
     }
     #signpost{
-      top: 38.5%;
+      top: 35%;
     }
     #home{
       margin-top: 7%;
     }
     #comment{
-      margin-top: 7%;
+      margin-top: 6%;
     }
     #credit{
       margin-top:6%;
@@ -356,10 +338,10 @@ body {
   
   @media only screen and (min-width: 1025px) {
     #lock{
-      top: 42%;
+      top: 30%;
     }
     #signpost{
-      top: 39%;
+      top: 34%;
     }
     #home{
       margin-top: 3%;

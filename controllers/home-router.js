@@ -50,9 +50,10 @@ router.get('/comments', (req, res) => {
 
 
 router.get('/select', withAuth, async (req, res) => {
-  try{
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
+   try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findOne(req.session.user_username, {
+      attributes: { exclude: ['password'] },    
     });
 
     const user = userData.get({ plain: true });
@@ -60,11 +61,16 @@ router.get('/select', withAuth, async (req, res) => {
     res.render('select', {
       ...user,
       logged_in: true
-    })
-  } catch(err) {
+    });
+  } catch (err) {
     res.status(500).json(err);
   }
 });
+
+  //  await res.render('select', { title: 'Select' })
+     
+    
+// });
 
 
 
@@ -77,7 +83,23 @@ router.get('/credit', (req, res) => {
   res.render('credit', { title: 'Credits' });
 });
 
-//this one works :)
+//get scene by id
+  router.get('/story/:id', async (req, res) =>{
+    try {
+      const sceneData = await Scene.findByPk(req.params.id);
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      const scene = sceneData.get({ plain: true });
+      res.render('story',{scene});
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+//renders all scenes at once, keep for debugging purposes
 // router.get('/story', async (req, res) => {
 //   try{
 //     const sceneData = await Scene.findAll( {
