@@ -1,7 +1,7 @@
 const thanks = document.getElementById("commTitle");
 const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault(); // prevent the form from submitting normally
 
   const userName = document.getElementById("name");
@@ -12,18 +12,15 @@ form.addEventListener("submit", (e) => {
     comment: comment.value,
   };
   // Set up the request options
-  const postComment = (comment) =>
-    fetch("/api/comments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(comment),
-    });
+    const postComment = (comment) =>
+      fetch("/api/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(comment),
+      });
 
-  // Send the POST request to the server
-  postComment(newComment)
-    .then((response) => {
+    postComment(newComment)
+      .then((response) => {
       if (response.ok) {
         // Request successful, handle the response
         return response.json();
@@ -46,23 +43,3 @@ form.addEventListener("submit", (e) => {
   thanks.classList.add("thank-you");
   thanks.innerText = "Thank You!";
 });
-
-const renderComments = async () => {
-  try {
-    const res = await fetch("/api/comments"); // fetch comments from API
-    const comments = await res.json(); // parse response as JSON
-
-    const commentsContainer = document.getElementById("comments-container");
-    comments.forEach((comment) => {
-      const commentHtml = `
-              <div class="comment">
-                <h3>${comment.title}</h3>
-                <p>${comment.text}</p>
-              </div>
-            `;
-      commentsContainer.insertAdjacentHTML("beforeend", commentHtml); // append comment HTML to comments container
-    });
-  } catch (error) {
-    console.error(error);
-  }
-};

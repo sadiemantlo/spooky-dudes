@@ -5,6 +5,7 @@ const seedScenes = require('./sceneData.js');
 const seedUsers = require('./userData.js');
 
 const userData = require('./userData');
+const seedComments = require('./commentData');
 
 const seedDatabase = async () => {
   try {
@@ -30,7 +31,9 @@ const seed = async () => {
   await seedScenes();
   console.log('\n---- SCENES SEEDED ----\n');
   await seedUsers();
-  console.log('users have been seeded!')
+  console.log('users have been seeded!');
+  await seedComments();
+  console.log('\n---- COMMENTS SEEDED ----\n');
   process.exit(0);  
 };
 

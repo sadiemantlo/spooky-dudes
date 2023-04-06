@@ -8,7 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/css/style-animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
@@ -23,7 +24,7 @@
         <h3 id="groupName" class="text-center">Spooky Doods presents:</h3>
       </div>
       <div class="col-3 d-flex justify-content-end">
-        <a href="/"><img src ="/images/home.png" class="home" style="width: 50px; height: 50px; margin:15px; "></a>
+        <a href="/"><img id="ghostHome" src="/images/ghostHome.png" class="home" style="width: 80px; height: 80px; margin:15px; "></a>
       </div>
     
     </div>
@@ -36,6 +37,14 @@
   <footer>
     <p id="copyright" class="text-center fixed-bottom">2023 Bootcamp Project 2</p>
   </footer>
-</body>
 
+
+  <!--importing anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"> </script> 
+  <script src="/animations/homePageAnimations.js"> </script>
+
+  
+
+
+  </body>
 </html>

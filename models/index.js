@@ -1,6 +1,7 @@
 const User = require('./User');
 const Story = require('./Story');
 const Scene = require('./Scene');
+const Comment = require('./Comment');
 
 // Define sequelize associations in this file.
 
@@ -15,4 +16,4 @@ Story.hasMany(Scene, {
 
 
 
-module.exports = { User, Story, Scene };
+module.exports = { User, Story, Scene, Comment };

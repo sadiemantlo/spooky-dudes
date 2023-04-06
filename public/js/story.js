@@ -1,13 +1,19 @@
-// const response = await fetch('/story/:id', {
-//   method: 'GET',
-//   body: JSON.stringify({ title, text }),
-//   headers: {
-//     'Content-Type': 'application/json; charset=UTF-8',
-//   },
-// });
+function buttonEmpty() {
+  const hideText2= document.querySelector("div#scene-button2 button a");
+  const hideText3= document.querySelector("div#scene-button3 button a");
+  const hideButton2 = document.getElementById("scene-button2");
+  const  hideButton3= document.getElementById("scene-button3");
 
+  if (hideText2.innerHTML === "@") {
+    hideButton2.style.display = "none"
+  }
+  if (hideText3.innerHTML === "@") {
+    hideButton3.style.display = "none"
+  }
 
-
-// document
-//   .querySelector('#start')
-//   .addEventListener('#start', handleSignupSubmit);
+  //test 
+ // hideButton2.style.display = "none";
+ // hideButton3.style.display = "none";
+}
+buttonEmpty()
+console.log();
