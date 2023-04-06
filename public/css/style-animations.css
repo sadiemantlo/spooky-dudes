@@ -91,6 +91,15 @@ img {
   z-index: 1;
 }
 
+.deathText {
+  position: absolute;
+  opacity: 0;
+  font-size: 45px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .titletext {
   position: absolute;
   text-align: center;
@@ -158,6 +167,22 @@ img {
   z-index: 1;
 }
 .sceneTitle8 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle9 {
+  position: absolute;
+  opacity: 0;
+  top: 10%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle10 {
   position: absolute;
   opacity: 0;
   top: 25%;
