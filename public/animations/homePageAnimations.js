@@ -41,7 +41,7 @@ anime({
     targets: "#start",
     opacity: {
     value: 1,
-    delay: 8000,
+    delay: 500,
     duration: 3000,
     },
 })
