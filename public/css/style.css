@@ -148,7 +148,6 @@ body {
   #lock {
     top: 42%;
   }
-<<<<<<< HEAD
 }
 
 /* comment section css */
@@ -189,7 +188,20 @@ body {
 .hide {
   display: none;
 } 
-=======
+
+.comment-container {
+  height: 300px;
+  overflow: scroll;
+}
+
+#userName {
+    font-size: 40px;
+}
+
+#userComment {
+  font-size: 18px;
+}
+
   
   .portfolio-hero-header-description li:first-child:before {
     content: "";
@@ -315,4 +327,3 @@ body {
       margin-top: 2.5%;
     }
   }
->>>>>>> 5a4a2392f3ea811a053015433e59717ef731948c
