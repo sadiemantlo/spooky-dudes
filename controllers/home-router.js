@@ -58,56 +58,102 @@ router.get("/viewComment", async (req, res) => {
   }
 });
 
-router.get("/select", (req, res) => {
-  res.render("select", { title: "Please Make a Selection" });
-});
-
-//this one works :)
-router.get("/story", async (req, res) => {
-  try {
-    const sceneData = await Scene.findAll({
-      include: {
-        model: Story,
-      },
+router.get('/select', withAuth, async (req, res) => {
+   try {
+    console.log('----- Req.session is -----', req.session);
+    // Find the logged in user based on the session ID
+    const userData = await User.findOne({ where: { username: req.session.user_username}}, {
+      attributes: { exclude: ['password'] },    
     });
-    const scenes = sceneData.map((scene) => scene.get({ plain: true }));
-    console.log(scenes);
-    res.render("story", { scenes });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+    console.log('----- userData is -----', userData);
+    const user = userData.get({ plain: true });
+
+    res.render('select', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
-router.get("story/:id", async (req, res) => {
+router.get('/comment', (req, res) => {
+  res.render('comment', { title: 'Comment' });
+});
+
+
+router.get('/credit', (req, res) => {
+  res.render('credit', { title: 'Credits' });
+});
+
+//get scene by id
+  router.get('/story/:id', async (req, res) =>{
+    try {
+      const sceneData = await Scene.findByPk(req.params.id);
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      const scene = sceneData.get({ plain: true });
+      res.render('story',{scene});
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+//renders all scenes at once, keep for debugging purposes
+// router.get('/story', async (req, res) => {
+//   try{
+//     const sceneData = await Scene.findAll( {
+//       include: { 
+//         model: Story 
+//       },
+//     });
+//     const scenes = sceneData.map((scene) => scene.get({plain:true}));
+//     console.log(scenes);
+//     res.render('story',{scenes});
+//   }
+//   catch (error) {
+//     console.error(error);
+//     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
+//   }
+//   });
+
+
+//this one doesn't work
+// router.get('/story/:id', async (req, res) =>{
+//   try {
+//     const sceneData = await Scene.findByPk(req.params.id, {
+//             include: { 
+//               model: Story 
+//             },
+//           });
+//   const scenes = sceneData.get({ plain: true });
+
+
+//     console.log(sceneData);
+//     res.render('story',{scenes});
+
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json(error);
+//   }
+
+//   })
+router.get('/story/:id', async (req, res) => {
   try {
-    const sceneData = await Scene.findByPk(req.params.id, {
-      include: [
-        {
-          model: Scene,
-          attributes: [
-            "id",
-            "image",
-            "title",
-            "text",
-            "choice1",
-            "choice2",
-            "choice3",
-          ],
-        },
-      ],
-    });
-    const scenes = sceneData.map((scene) => scene.get({ plain: true }));
-    console.log(scenes);
-    res.render("story", { scenes });
+    const sceneData = await Scene.findByPk(req.params.id);
     if (!sceneData) {
-      res.status(404).json({ message: "No scene found with this id :/" });
+      res.status(404).json({ message: 'No scene found with this id :/' });
       return;
     }
-    res.render("story", { scenes });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json(error);
+    const scene = sceneData.get({ plain: true });
+    res.render('story', { scene });
+    // res.status(200).json(sceneData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
