@@ -99,12 +99,79 @@ img {
   z-index: 1;
 } 
 
-.sceneTitle {
+.sceneTitle1 {
   position: absolute;
-  top:50%;
-  left:40%;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
   z-index: 1;
 }
+.sceneTitle2 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.sceneTitle3 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.sceneTitle4 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle5 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle6 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle7 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.sceneTitle8 {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  margin-bottom: 100%;
+  text-align: center;
+  z-index: 1;
+}
+ */
+
+
+
+
+
+
 
 .storyText {
   text-align: left;

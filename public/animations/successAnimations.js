@@ -1,5 +1,3 @@
-
-
 // Animate the transition from image1 to image2
 document.addEventListener('DOMContentLoaded', () => {
 async function treasure() {
@@ -8,7 +6,6 @@ async function treasure() {
 
 anime.set("#treasureopen", { opacity: 0 });
 anime.set(".congratsText", { opacity: 0 });
-
 
 anime({
       targets: "#treasureopen",
