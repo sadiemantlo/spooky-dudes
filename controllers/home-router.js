@@ -58,7 +58,7 @@ router.get('/comment', (req, res) => {
 });
 
 //get scene by id
-  router.get('/story/:id', async (req, res) =>{
+  router.get('/story/:id', withAuth, async (req, res) =>{
     try {
       const sceneData = await Scene.findByPk(req.params.id);
       if(!sceneData) {
@@ -66,7 +66,9 @@ router.get('/comment', (req, res) => {
         return;
       }
       const scene = sceneData.get({ plain: true });
-      res.render('story',{scene});
+      res.render('story',{
+        scene,
+        logged_in: true});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
