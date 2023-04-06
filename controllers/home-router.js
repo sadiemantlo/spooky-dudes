@@ -57,6 +57,22 @@ router.get('/comment', (req, res) => {
   res.render('comment', {title: 'Comment'});
 });
 
+//get scene by id
+  router.get('/story/:id', async (req, res) =>{
+    try {
+      const sceneData = await Scene.findByPk(req.params.id);
+      if(!sceneData) {
+        res.status(404).json({ message: 'No scene found with this id :/' });
+        return;
+      }
+      const scene = sceneData.get({ plain: true });
+      res.render('story',{scene});
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
 //renders all scenes at once, keep for debugging purposes
 // router.get('/story', async (req, res) => {
 //   try{
@@ -74,21 +90,5 @@ router.get('/comment', (req, res) => {
 //     res.status(500).send('⛔ Uh oh! An unexpected error occurred.');
 //   }
 //   });
-
-//get scene by id
-  router.get('/story/:id', async (req, res) =>{
-    try {
-      const sceneData = await Scene.findByPk(req.params.id);
-      if(!sceneData) {
-        res.status(404).json({ message: 'No scene found with this id :/' });
-        return;
-      }
-      const scene = sceneData.get({ plain: true });
-      res.render('story',{scene});
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-});
 
     module.exports = router;
