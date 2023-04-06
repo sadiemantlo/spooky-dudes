@@ -1,12 +1,8 @@
-# SPOOKY STORY >:] <!-- omit in toc -->
-
-
-![wireframe](./public/images/NITM-Wireframe.png)
-
-[click this link to view this project's proposal](https://docs.google.com/document/d/1ewPnESOPCw304MIXz6Bu2y17ucfuHVgr6pkjIWyUSzs/edit#heading=h.kpv7qq2z2hft)
+# THE HOUSE WITH THE COMICALLY BAD YELP REVIEW
 
 This site is for users who enjoy nostalgic horror stories with a modern twist. "The House with the Comically Bad Yelp Review" creates an immersive experience where users can put their intuition to the test and see if they would survive a night in a haunted house. Features include animation, a login/signup page, a comments section, and a spooky animated ghost "home button".
 
+- [Usage](#usage)
 - [Development](#development)
 - [Sessions](#sessions)
 - [Authentication](#authentication)
@@ -14,14 +10,22 @@ This site is for users who enjoy nostalgic horror stories with a modern twist. "
 - [Code Style](#code-style)
 - [Deploy to Heroku](#deploy-to-heroku)
 
+## Usage
+
+The homepage of this site should appear as so:
+![home](./public/images/RM-home.png)
+Selectin the login button will route users to the login page. If they don't have any login information saved, they have the option to click the signup link.
+![login](./public/images/RM-login.png)
+The signup page will appear as so:
+![signup](./public/images/RM-signup.png)
+Once users are logged in, they will be able to read the story. When the story is over, they have the option to leave a comment in the comments page.
+![comment](./public/images/RM-comment.png)
+
 
 ## Development
+![wireframe](./public/images/NITM-Wireframe.png)
 
-This boilerplate includes [nodemon](https://nodemon.io/). Run `npm run watch` to start the server in watch mode during development.
-
-## Sessions
-
-[express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) are used for session management. Configure cookies and sessions in [config/session.js](./config/session.js)
+[click this link to view this project's proposal](https://docs.google.com/document/d/1ewPnESOPCw304MIXz6Bu2y17ucfuHVgr6pkjIWyUSzs/edit#heading=h.kpv7qq2z2hft)
 
 ## Authentication
 
