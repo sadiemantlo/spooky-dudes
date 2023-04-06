@@ -188,6 +188,20 @@ body {
 .hide {
   display: none;
 } 
+
+.comment-container {
+  height: 300px;
+  overflow: scroll;
+}
+
+#userName {
+    font-size: 40px;
+}
+
+#userComment {
+  font-size: 18px;
+}
+
   
   .portfolio-hero-header-description li:first-child:before {
     content: "";
