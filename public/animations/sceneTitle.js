@@ -8,7 +8,7 @@ if (window.location.pathname === '/story/1'){
     targets: ".sceneTitle1",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -25,7 +25,7 @@ if (window.location.pathname === '/story/2'){
     targets: ".sceneTitle2",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -42,7 +42,7 @@ if (window.location.pathname === '/story/3'){
     targets: ".sceneTitle3",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -59,7 +59,7 @@ if (window.location.pathname === '/story/4'){
     targets: ".sceneTitle4",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -76,7 +76,7 @@ if (window.location.pathname === '/story/5'){
     targets: ".sceneTitle5",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -93,7 +93,7 @@ if (window.location.pathname === '/story/6'){
     targets: ".sceneTitle6",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -110,7 +110,7 @@ if (window.location.pathname === '/story/7'){
     targets: ".sceneTitle7",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
@@ -127,10 +127,66 @@ if (window.location.pathname === '/story/8'){
     targets: ".sceneTitle8",
     opacity: 1,
     duration: 20000,
-    delay: 5000,
+    delay: 500,
   });
 }
 }
 sceneTitle8()
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  async function sceneTitle9() {
+    
+    if (window.location.pathname === '/story/9'){
+      anime.set(".sceneTitle9", { opacity: 0 });
+
+      anime({
+        targets: ".sceneTitle9",
+        opacity: 1,
+        duration: 4000,
+        translateX: 40,
+        translateY: 250,
+        scaleY: 1.8,
+        complete: function () {
+          anime({
+            targets: ".sceneTitle9",
+            color: {
+              value: "#FF0000",
+              duration: 3000,
+              easing: "linear",
+            },
+          });
+        }
+      })
+    }
+  }
+  sceneTitle9()
+})
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    async function sceneTitle10() {
+    
+      if (window.location.pathname === '/story/10'){
+        anime.set(".sceneTitle10", { opacity: 0 });
+  
+        anime({
+          targets: ".sceneTitle10",
+          opacity: 1,
+          duration: 5000,
+          scaleY: 1.8,
+          complete: function () {
+            anime({
+              targets: ".sceneTitle10",
+              color: {
+                value: "#FF0000",
+                duration: 3000,
+                easing: "linear",
+              },
+            });
+          }
+        })
+      }
+    }
+    sceneTitle10()
+  })

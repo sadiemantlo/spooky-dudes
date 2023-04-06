@@ -85,7 +85,7 @@ const sceneData = [
   },
   {
     id: 9,
-    image: "cellar.png",
+    image: "handgrab.png",
     title: "You Die in the Cellar",
     text: "Forget the wine, you book it up the dark stairway, setting your sight on the dim light of the kitchen above you. You almost reach the top when a rush of cold air hits you. Out of nowhere, you feel icy hands claw at your shoulder blades and lift you up by the back of your shirt. Your shoes scuff the stone staircase as you kick out at nothing. “Let go of me!” You shout. The hands release you, sending you into a free fall down to the cellar far below you. Everything goes black.",
     choice1:["2","Try Again?"],

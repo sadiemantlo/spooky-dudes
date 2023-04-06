@@ -17,7 +17,7 @@ anime({
       complete: function (){
         anime({
           targets: ".congratsText",
-          delay: 2000,
+          delay: 50,
           opacity: 1,
           duration: 2000,
           translateX: 250,
