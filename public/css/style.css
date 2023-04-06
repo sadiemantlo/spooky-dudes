@@ -22,13 +22,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 .portfolio-hero-header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -223,7 +216,7 @@ body {
   
   .groupBanner{
     background-color: --plum;
-    height: 20vh;
+    height: 30vh;
   }
   #groupName{
     padding: 10px;
@@ -292,17 +285,16 @@ body {
     border: 1px solid;
   }
 
+
   
+
   
   @media only screen and (min-width: 500px) {
-    #greet{
-      top:
-    }
     #lock{
-      top: 31%;
+      top: 41%;
     }
     #signpost{
-      top: 35%;
+      top: 38.5%;
     }
     #home{
       margin-top: 8.5%;
@@ -321,21 +313,40 @@ body {
     }
   }
 
-  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     #lock{
-      top: 29%;
+      top: 40.5%;
+    }
+    .painttext{
+      font-size: 12px;
     }
     #signpost{
-      top: 35%;
+      top: 42%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
+  }
+
+
+  @media (min-width: 1024px) {
+    #lock{
+      top: 41%;
+    }
+    #signpost{
+      top: 43%;
     }
     #home{
-      margin-top: 7%;
-    }
-    #comment{
       margin-top: 6%;
     }
+    #comment{
+      margin-top: 5%;
+    }
     #credit{
-      margin-top:6%;
+      margin-top:5%;
     }
     #Lgate{
       display: none;
@@ -346,21 +357,21 @@ body {
   }
   
   
-  @media only screen and (min-width: 1025px) {
+  @media (min-width: 1025px) {
     #lock{
-      top: 30%;
+      top: 42%;
     }
     #signpost{
-      top: 34%;
+      top: 43%;
     }
     #home{
-      margin-top: 3%;
+      margin-top: 6%;
     }
     #comment{
-      margin-top: 3%;
+      margin-top: 5%;
     }
     #credit{
-      margin-top: 2.5%;
+      margin-top: 5%;
     }
 
     #Lgate{
@@ -372,4 +383,58 @@ body {
       max-width: 350px; max-height: 350px;
     }
 
+  }
+  @media (min-width: 1440px){
+    #lock{
+      top: 42%;
+    }
+    #signpost{
+      top: 42%;
+    }
+    #home{
+      margin-top: 5%;
+    }
+    #comment{
+      margin-top: 4%;
+    }
+    #credit{
+      margin-top: 3%;
+    }
+
+    #Lgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+    #Rgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+  }
+
+
+  @media (min-width: 1920px){
+    #lock{
+      top: 42%;
+    }
+    #signpost{
+      top: 42%;
+    }
+    #home{
+      margin-top: 3%;
+    }
+    #comment{
+      margin-top: 3%;
+    }
+    #credit{
+      margin-top: 2.8%;
+    }
+
+    #Lgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+    #Rgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
   }
