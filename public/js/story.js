@@ -8,6 +8,4 @@
 
 
 
-// document
-//   .querySelector('#start')
-//   .addEventListener('#start', handleSignupSubmit);
+

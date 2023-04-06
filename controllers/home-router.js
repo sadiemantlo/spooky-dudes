@@ -49,12 +49,32 @@ router.get('/comments', (req, res) => {
 });
 
 
-router.get('/select', (req, res) => {
-    res.render('select', {title: 'Please Make a Selection'});
-  });
+router.get('/select', withAuth, async (req, res) => {
+  try{
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
 
-router.get('/comment', (req, res) => {  
-  res.render('comment', {title: 'Comment'});
+    const user = userData.get({ plain: true });
+
+    res.render('select', {
+      ...user,
+      logged_in: true
+    })
+  } catch(err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+router.get('/comment', (req, res) => {
+  res.render('comment', { title: 'Comment' });
+});
+
+
+router.get('/credit', (req, res) => {
+  res.render('credit', { title: 'Credits' });
 });
 
 //this one works :)
@@ -76,40 +96,40 @@ router.get('/comment', (req, res) => {
 //   });
 
 
-  //this one doesn't work
-  // router.get('/story/:id', async (req, res) =>{
-  //   try {
-  //     const sceneData = await Scene.findByPk(req.params.id, {
-  //             include: { 
-  //               model: Story 
-  //             },
-  //           });
-  //   const scenes = sceneData.get({ plain: true });
+//this one doesn't work
+// router.get('/story/:id', async (req, res) =>{
+//   try {
+//     const sceneData = await Scene.findByPk(req.params.id, {
+//             include: { 
+//               model: Story 
+//             },
+//           });
+//   const scenes = sceneData.get({ plain: true });
 
 
-  //     console.log(sceneData);
-  //     res.render('story',{scenes});
-    
-  //   } catch (error) {
-  //     console.log(error);
-  //     res.status(500).json(error);
-  //   }
-    
-  //   })
-  router.get('/story/:id', async (req, res) =>{
-    try {
-      const sceneData = await Scene.findByPk(req.params.id);
-      if(!sceneData) {
-        res.status(404).json({ message: 'No scene found with this id :/' });
-        return;
-      }
-      const scene = sceneData.get({ plain: true });
-      res.render('story',{scene});
-      // res.status(200).json(sceneData);
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
+//     console.log(sceneData);
+//     res.render('story',{scenes});
+
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json(error);
+//   }
+
+//   })
+router.get('/story/:id', async (req, res) => {
+  try {
+    const sceneData = await Scene.findByPk(req.params.id);
+    if (!sceneData) {
+      res.status(404).json({ message: 'No scene found with this id :/' });
+      return;
     }
+    const scene = sceneData.get({ plain: true });
+    res.render('story', { scene });
+    // res.status(200).json(sceneData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
-    module.exports = router;
+module.exports = router;

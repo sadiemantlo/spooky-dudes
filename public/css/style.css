@@ -264,6 +264,27 @@ body {
     font-family: 'Finger Paint', cursive;
   }
 
+  .charselect{
+    border: 1px solid;
+    border-color: white;    
+    margin: 10px;
+    display:inline-block;
+    padding-top: 10px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-
+  out;
+  }
+
+  .charselect:hover{
+    box-shadow: inset 0px 0px 8px
+  rgb(255, 255, 255), 0 0 15px
+  rgb(244, 208, 245);
+  }
+
+  .charselect:hover{
+    border: 1px solid;
+  }
+
 
   
   @media only screen and (max-width: 600px) {
