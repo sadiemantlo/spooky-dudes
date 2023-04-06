@@ -137,33 +137,56 @@ sceneTitle8()
 document.addEventListener('DOMContentLoaded', () => {
   async function sceneTitle9() {
     
-  if (window.location.pathname === '/story/9'){
-    anime.set(".sceneTitle9", { opacity: 0 });
-  
-    anime({
-      targets: ".sceneTitle9",
-      opacity: 1,
-      duration: 20000,
-      delay: 500,
-    });
-  }
+    if (window.location.pathname === '/story/9'){
+      anime.set(".sceneTitle9", { opacity: 0 });
+
+      anime({
+        targets: ".sceneTitle9",
+        opacity: 1,
+        duration: 4000,
+        translateX: 40,
+        translateY: 250,
+        scaleY: 1.8,
+        complete: function () {
+          anime({
+            targets: ".sceneTitle9",
+            color: {
+              value: "#FF0000",
+              duration: 3000,
+              easing: "linear",
+            },
+          });
+        }
+      })
+    }
   }
   sceneTitle9()
-  })
+})
+
 
   document.addEventListener('DOMContentLoaded', () => {
     async function sceneTitle10() {
-      
-    if (window.location.pathname === '/story/10'){
-      anime.set(".sceneTitle10", { opacity: 0 });
     
-      anime({
-        targets: ".sceneTitle10",
-        opacity: 1,
-        duration: 20000,
-        delay: 500,
-      });
-    }
+      if (window.location.pathname === '/story/10'){
+        anime.set(".sceneTitle10", { opacity: 0 });
+  
+        anime({
+          targets: ".sceneTitle10",
+          opacity: 1,
+          duration: 5000,
+          scaleY: 1.8,
+          complete: function () {
+            anime({
+              targets: ".sceneTitle10",
+              color: {
+                value: "#FF0000",
+                duration: 3000,
+                easing: "linear",
+              },
+            });
+          }
+        })
+      }
     }
     sceneTitle10()
-    })
+  })

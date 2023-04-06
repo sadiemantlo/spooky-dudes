@@ -22,14 +22,17 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ where: { username } });
     if (!user) {
       throw new Error('User not found.'); 
-    }   
+    }
+
     const isValidPassword = await user.checkPassword(password);
     if (!isValidPassword) {
       throw new Error('Invalid password');
     }
+
     req.session.isLoggedIn = true;
     req.session.userId = user.id;
-    req.session.save(() => res.json({ id: user.id }));
+    req.session.user_username = user.username;
+    req.session.save(() => res.json({ id: user.id}));
   } catch (error) {
     console.error(error);
     res.status(400).json({ message: 'Invalid username or password.' });
