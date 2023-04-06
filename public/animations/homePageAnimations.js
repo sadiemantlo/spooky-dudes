@@ -18,9 +18,10 @@ anime.timeline({
 })
 .add({
     targets: "#title",
-    width: {
-        value: ["0vw", "100vw"],
-        duration: 150000,
+    scale: {
+        value: [0, 0.9],
+        duration: 8000,
+        easing: 'linear',
     },
     opacity: {
     value: 1,

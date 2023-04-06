@@ -188,3 +188,175 @@ body {
 .hide {
   display: none;
 } 
+  
+  .portfolio-hero-header-description li:first-child:before {
+    content: "";
+  }
+  
+  .portfolio-hero-header-menu {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  
+  .portfolio-hero-header-menu li {
+    margin: 1.25rem;
+  }
+  
+  .portfolio-hero-header-menu li a {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  
+  
+  .groupBanner{
+    background-color: --plum;
+    height: 30vh;
+  }
+  #groupName{
+    padding: 10px;
+    color: rgb(28, 182, 28);
+    font-size: 50px;
+    font-family: 'Creepster', cursive;
+  }
+  
+  .story{
+    font-size: 75px;
+    font-family: 'Creepster', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -200%);
+  }
+  #login{
+    margin: 10px;
+  }
+  
+  #copyright{
+    color: white;
+  }
+  
+  #lock{
+    position: absolute;  
+    left: 0;
+    color: black;
+  }
+  
+  .painttext{
+    font-family: 'Finger Paint', cursive;
+  }
+  
+  .sub:hover{
+    color:white;
+  }
+
+ 
+
+  #signpost{
+    position: absolute;
+    left: 0;
+    color: black;
+    font-family: 'Finger Paint', cursive;
+  }
+
+
+  
+  @media only screen and (max-width: 600px) {
+    #lock{
+      top: 40.5%;
+    }
+    .painttext{
+      font-size: 12px;
+    }
+    #signpost{
+      top: 33%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) {
+    #lock{
+      top: 41%;
+    }
+    #signpost{
+      top: 38.5%;
+    }
+    #home{
+      margin-top: 8.5%;
+    }
+    #comment{
+      margin-top: 7%;
+    }
+    #credit{
+      margin-top:7%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+    #lock{
+      top: 41%;
+    }
+    #signpost{
+      top: 38.5%;
+    }
+    #home{
+      margin-top: 7%;
+    }
+    #comment{
+      margin-top: 7%;
+    }
+    #credit{
+      margin-top:6%;
+    }
+    #Lgate{
+      display: none;
+    }
+    #Rgate{
+      display: none;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1025px) {
+    #lock{
+      top: 42%;
+    }
+    #signpost{
+      top: 39%;
+    }
+    #home{
+      margin-top: 3%;
+    }
+    #comment{
+      margin-top: 3%;
+    }
+    #credit{
+      margin-top: 2.5%;
+    }
+
+    #Lgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+    #Rgate{
+      display: flex;
+      max-width: 350px; max-height: 350px;
+    }
+
+  }
