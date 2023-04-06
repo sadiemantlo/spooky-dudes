@@ -5,9 +5,8 @@
 
 [click this link to view this project's proposal](https://docs.google.com/document/d/1ewPnESOPCw304MIXz6Bu2y17ucfuHVgr6pkjIWyUSzs/edit#heading=h.kpv7qq2z2hft)
 
-This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL. This boilerplate if configured for easy deployment on Heroku with JawsDB MySQL add-on.
+This site is for users who enjoy nostalgic horror stories with a modern twist. "The House with the Comically Bad Yelp Review" creates an immersive experience where users can put their intuition to the test and see if they would survive a night in a haunted house. Features include animation, a login/signup page, a comments section, and a spooky animated ghost "home button".
 
-- [Setup](#setup)
 - [Development](#development)
 - [Sessions](#sessions)
 - [Authentication](#authentication)
@@ -15,12 +14,6 @@ This boilerplate may be used as a starting point for building a full-stack app w
 - [Code Style](#code-style)
 - [Deploy to Heroku](#deploy-to-heroku)
 
-## Setup
-
-1. Run `npm i`.
-2. You will need an existing MySQL database. **mysql -> source db/schema.sql**
-3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
-4. Run `npm start` to start the app.
 
 ## Development
 

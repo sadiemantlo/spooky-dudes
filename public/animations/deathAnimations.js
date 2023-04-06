@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
             });
         }
-    }
+    
     deathScene()
 })
