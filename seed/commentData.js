@@ -21,6 +21,10 @@ const commentData =
     "name": "Bob",
     "comment": "Darn tootin' fun!"
   },
+  {
+    "name": "Karen",
+    "comment": "I'm suing"
+  }
 ]
 
 const seedComments = () => Comment.bulkCreate(commentData, {
