@@ -320,9 +320,6 @@ body {
     #lock{
       top: 40.5%;
     }
-    .painttext{
-      font-size: 12px;
-    }
     #signpost{
       top: 33%;
     }
@@ -418,7 +415,7 @@ body {
 
   @media (min-width: 1920px){
     #lock{
-      top: 42%;
+      top: 40%;
     }
     #signpost{
       top: 42%;
