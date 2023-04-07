@@ -14,7 +14,7 @@ This site is for users who enjoy nostalgic horror stories with a modern twist. "
 
 The homepage of this site should appear as so:
 ![home](./public/images/RM-home.png)
-Selectin the login button will route users to the login page. If they don't have any login information saved, they have the option to click the signup link.
+Selecting the login button will route users to the login page. If they don't have any login information saved, they have the option to click the signup link. If users don't log in, they won't have access to the story or the comments page.
 ![login](./public/images/RM-login.png)
 The signup page will appear as so:
 ![signup](./public/images/RM-signup.png)
