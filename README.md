@@ -5,9 +5,8 @@ This site is for users who enjoy nostalgic horror stories with a modern twist. "
 - [Usage](#usage)
 - [Development](#development)
 - [Sessions](#sessions)
-- [Authentication](#authentication)
-- [Templates](#templates)
-- [Code Style](#code-style)
+- [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
 - [Deploy to Heroku](#deploy-to-heroku)
 
 ## Usage
@@ -23,37 +22,35 @@ Once users are logged in, they will be able to read the story. When the story is
 
 
 ## Development
+Click [here](https://github.com/sadiemantlo/spooky-dudes) to view this site's repository.
+
 ![wireframe](./public/images/NITM-Wireframe.png)
 
 [click this link to view this project's proposal](https://docs.google.com/document/d/1ewPnESOPCw304MIXz6Bu2y17ucfuHVgr6pkjIWyUSzs/edit#heading=h.kpv7qq2z2hft)
 
-## Authentication
-
-Passwords are hashed using [bcrypt](https://www.npmjs.com/package/bcrypt). Middleware for protected routes redirects to `/login`. This can be modified by updating [util/withAuth.js](./util/withAuth.js).
-
-## Templates
+## Technologies Used
 
 [Handlebars.js](https://handlebarsjs.com/) and [express-handlebars](https://www.npmjs.com/package/express-handlebars) are used for rendering templates.
 
-You can add your own custom helper functions by exporting them from [util/helpers.js](./util/helpers.js).
+[Anime.js](https://animejs.com/) was used for app animations
 
-## Code Style
+Sequelize was used for modelling the database.
 
-[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
+Bootstrap was used for frontend design features
+
+Bcrypt was used for encrypting sensitive user information
+
+## Contributors
+
+this site was created and developed by four of the coolest horror story nerds in the world:
+[Eugene Calm](https://github.com/ecalmrd)
+[Sasha Doval](https://github.com/sdoval27)
+[Sadie Mantlo](https://github.com/sadiemantlo)
+[Sinclair Li](https://github.com/AForkintheCode)
 
 ## Deploy to Heroku
+Deployed site link [here](https://spooky-dudes.herokuapp.com/)
 
-### Prerequisites
-
-Sign up for an [Heroku](https://id.heroku.com/login) account and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
-
-The app must be setup using Git for version control in order to deploy on Heroku
-following this guide. Be sure to initialize Git before proceeding if you did not
-initially create this project by using the template repo.
-
-### Create and Configure a Heroku App
-
-The code for this boilerplate is pre-configured to deploy to Heroku and connect to the JAWS DB add-on for MySQL. In order to deploy, you must provision the JAWS DB add-on.
 
 **IMPORTANT:** Payment info. must be provided in order to use the JawsDB MySQL
 add-on. You must provide a credit card to use the service. **With the exception that all of you must be using the student package**
