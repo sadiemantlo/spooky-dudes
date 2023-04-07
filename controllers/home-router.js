@@ -58,7 +58,7 @@ router.get("/viewComment", async (req, res) => {
   }
 });
 
-router.get('/select', withAuth, async (req, res) => {
+router.get('/select', async (req, res) => {
    try {
     console.log('----- Req.session is -----', req.session);
     // Find the logged in user based on the session ID

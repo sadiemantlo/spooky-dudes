@@ -3,8 +3,9 @@
         <img src="/images/scroll.png" id="scroll" class="mx-auto" style="max-width: 550px; max-height: 750px;">
             <div id="lock" class="container">
                 <h1 class ="commFont" id="commTitle">Guests who've made<br>it out alive</h1>
-                {{#each comments as |comment|}}
+               
                     <div class="comment-container">
+                         {{#each comments as |comment|}}
                         <h2 style="text-decoration: underline" id="userName"class="commFont">{{comment.name}}</h2>
                         <h3 id="userComment" class="commFont">{{comment.comment}}</h3>
                         {{/each}}

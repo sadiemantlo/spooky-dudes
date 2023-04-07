@@ -18,7 +18,7 @@ anime.timeline({
     targets: "#title",
     scale: {
         value: [0, 0.9],
-        duration: 8000,
+        duration: 4000,
         easing: 'linear',
     },
     opacity: {
@@ -42,7 +42,7 @@ anime({
     targets: "#start",
     opacity: {
     value: 1,
-    delay: 8000,
+    delay: 5000,
     duration: 3000,
     },
 })
@@ -52,7 +52,7 @@ anime ({
     targets: "#login",
     opacity: {
     value: 1,
-    delay: 9000,
+    delay: 4000,
     duration: 3000,
   },
 });

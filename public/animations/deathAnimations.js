@@ -19,6 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ],
             });
         }
-    }
+    
     deathScene()
 })

@@ -1,62 +1,56 @@
-# SPOOKY STORY >:] <!-- omit in toc -->
+# THE HOUSE WITH THE COMICALLY BAD YELP REVIEW
 
+This site is for users who enjoy nostalgic horror stories with a modern twist. "The House with the Comically Bad Yelp Review" creates an immersive experience where users can put their intuition to the test and see if they would survive a night in a haunted house. Features include animation, a login/signup page, a comments section, and a spooky animated ghost "home button".
+
+- [Usage](#usage)
+- [Development](#development)
+- [Sessions](#sessions)
+- [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
+- [Deploy to Heroku](#deploy-to-heroku)
+
+## Usage
+
+The homepage of this site should appear as so:
+![home](./public/images/RM-home.png)
+Selecting the login button will route users to the login page. If they don't have any login information saved, they have the option to click the signup link. If users don't log in, they won't have access to the story or the comments page.
+![login](./public/images/RM-login.png)
+The signup page will appear as so:
+![signup](./public/images/RM-signup.png)
+Once users are logged in, they will be able to read the story. When the story is over, they have the option to leave a comment in the comments page.
+![comment](./public/images/RM-comment.png)
+
+
+## Development
+Click [here](https://github.com/sadiemantlo/spooky-dudes) to view this site's repository.
 
 ![wireframe](./public/images/NITM-Wireframe.png)
 
 [click this link to view this project's proposal](https://docs.google.com/document/d/1ewPnESOPCw304MIXz6Bu2y17ucfuHVgr6pkjIWyUSzs/edit#heading=h.kpv7qq2z2hft)
 
-This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL. This boilerplate if configured for easy deployment on Heroku with JawsDB MySQL add-on.
-
-- [Setup](#setup)
-- [Development](#development)
-- [Sessions](#sessions)
-- [Authentication](#authentication)
-- [Templates](#templates)
-- [Code Style](#code-style)
-- [Deploy to Heroku](#deploy-to-heroku)
-
-## Setup
-
-1. Run `npm i`.
-2. You will need an existing MySQL database. **mysql -> source db/schema.sql**
-3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
-4. Run `npm start` to start the app.
-
-## Development
-
-This boilerplate includes [nodemon](https://nodemon.io/). Run `npm run watch` to start the server in watch mode during development.
-
-## Sessions
-
-[express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) are used for session management. Configure cookies and sessions in [config/session.js](./config/session.js)
-
-## Authentication
-
-Passwords are hashed using [bcrypt](https://www.npmjs.com/package/bcrypt). Middleware for protected routes redirects to `/login`. This can be modified by updating [util/withAuth.js](./util/withAuth.js).
-
-## Templates
+## Technologies Used
 
 [Handlebars.js](https://handlebarsjs.com/) and [express-handlebars](https://www.npmjs.com/package/express-handlebars) are used for rendering templates.
 
-You can add your own custom helper functions by exporting them from [util/helpers.js](./util/helpers.js).
+[Anime.js](https://animejs.com/) was used for app animations
 
-## Code Style
+Sequelize was used for modelling the database.
 
-[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
+Bootstrap was used for frontend design features
+
+Bcrypt was used for encrypting sensitive user information
+
+## Contributors
+
+this site was created and developed by four of the coolest horror story nerds in the world:
+[Eugene Calm](https://github.com/ecalmrd)
+[Sasha Doval](https://github.com/sdoval27)
+[Sadie Mantlo](https://github.com/sadiemantlo)
+[Sinclair Li](https://github.com/AForkintheCode)
 
 ## Deploy to Heroku
+Deployed site link [here](https://spooky-dudes.herokuapp.com/)
 
-### Prerequisites
-
-Sign up for an [Heroku](https://id.heroku.com/login) account and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
-
-The app must be setup using Git for version control in order to deploy on Heroku
-following this guide. Be sure to initialize Git before proceeding if you did not
-initially create this project by using the template repo.
-
-### Create and Configure a Heroku App
-
-The code for this boilerplate is pre-configured to deploy to Heroku and connect to the JAWS DB add-on for MySQL. In order to deploy, you must provision the JAWS DB add-on.
 
 **IMPORTANT:** Payment info. must be provided in order to use the JawsDB MySQL
 add-on. You must provide a credit card to use the service. **With the exception that all of you must be using the student package**
