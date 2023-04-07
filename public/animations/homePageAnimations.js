@@ -5,6 +5,7 @@ anime.set("#groupName", { opacity: 0 });
 anime.set("#title", { opacity: 0 });
 anime.set("#start", { opacity: 0 });
 anime.set("#login", { opacity: 0 });
+anime.set("#comments", { opacity: 0 });
 
 anime.timeline({
     targets: "#groupName",
@@ -46,6 +47,7 @@ anime({
     },
 })
 
+
 anime ({
     targets: "#login",
     opacity: {
@@ -54,6 +56,14 @@ anime ({
     duration: 3000,
   },
 });
+anime({
+  targets: "#comments",
+  opacity: {
+  value: 1,
+  delay: 10000,
+  duration: 3000,
+  },
+})
 }
 }
 

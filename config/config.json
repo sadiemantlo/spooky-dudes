@@ -1,0 +1,22 @@
+{
+    "development": {
+      "username": null,
+      "password": null,
+      "database": "task_development",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": null,
+      "password": null,
+      "database": "task_test",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": null,
+      "password": null,
+      "database": "DATABASE_URL",
+      "dialect": "postgres"
+    }
+  }

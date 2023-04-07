@@ -179,15 +179,14 @@ body {
 
 .comment-container {
   height: 300px;
-  overflow: scroll;
 }
 
 #userName {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 #userComment {
-  font-size: 18px;
+  font-size: 20px;
 }
 
   
